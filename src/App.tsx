@@ -15,6 +15,8 @@ export const App = () => {
         <Route path="/" element={<TopPage />} />
         {/* サンプルページ */}
         <Route path="/sample" element={<SamplePage />} />
+        {/* ピアノページ */}
+        <Route path="/piano" element={<PianoPage />} />
       </Routes>
     </Box>
   );
