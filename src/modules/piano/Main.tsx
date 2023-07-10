@@ -254,6 +254,6 @@ const sx: SxProps<Theme> = {
         height: "40%",
     },
     ".C1": {
-
+        display: "flex",
     }
 };
