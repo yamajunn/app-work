@@ -41,12 +41,12 @@ import B3 from "../../resources/piano/B3.mp3";
 import C4 from "../../resources/piano/C4.mp3";
 
 export const Main = () => {
-    const [backgroundColor, setBackgroundColor] = useState("black");
+    const [C1_, C1__] = useState("black");
     const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
         if (event.key === "q") {
             var sound = new Audio(C1);
             sound.play();
-            setBackgroundColor("#FFF");
+            C1__("#FFF");
             resetColor();
         }
         if (event.key === "2") {
@@ -197,65 +197,154 @@ export const Main = () => {
 
     const resetColor = useCallback(() => {
         setTimeout(() => {
-            setBackgroundColor("#000");
-        }, 1000);
-    }, [backgroundColor]);
+            C1__("#FFF");
+        }, 100);
+    }, [C1_]);
 
-    return (
-        <Box className="Main" sx={sx}>
-            <Box className="Piano">
-                <Box
-                    className="Piano-black"
-                    tabIndex={0}
-                    onKeyDown={(e) => handleKeyDown(e)}
-                    sx={{ backgroundColor: backgroundColor, width: "100%", height: "200px" }}
-                />
-                <Box className="Piano-white">
-                    <Box className="C1"></Box>
-                    <Box className="D1"></Box>
-                    <Box className="E1"></Box>
-                    <Box className="F1"></Box>
-                    <Box className="G1"></Box>
-                    <Box className="A1"></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
-                </Box>
-            </Box>
-        </Box>
-    );
-};
+    return <Box className="Piano-white"><Box className="C1" onKeyDown={(e) => handleKeyDown(e)} tabIndex={0} sx={{ backgroundColor: C1_, width: "59px", height: "100%", border: "1px solid #000" }}></Box><Box className="D1"></Box><Box className="E1"></Box><Box className="F1"></Box><Box className="G1"></Box><Box className="A1"></Box><Box className="B1"></Box><Box className="C2"></Box><Box className="D2"></Box><Box className="E2"></Box><Box className="F2"></Box><Box className="G2"></Box><Box className="A2"></Box><Box className="B2"></Box><Box className="C3"></Box><Box className="D3"></Box><Box className="E3"></Box><Box className="F3"></Box><Box className="G3"></Box><Box className="A3"></Box><Box className="B3"></Box><Box className="C4"></Box></Box>
+}
+
 
 const sx: SxProps<Theme> = {
     "&.Main": {
         width: "100%",
     },
     ".Piano": {
-        width: "90%",
+        width: "1333px",
         height: "300px",
-        margin: "10% 5% 0",
-    },
-    ".Piano-black": {
-        widht: "100%",
-        height: "60%",
+        margin: "10% auto 0"
     },
     ".Piano-white": {
-        backgroundColor: "white",
+        position: "relative",
         widht: "100%",
-        height: "40%",
+        height: "100%",
+        display: "flex",
     },
-    ".C1": {},
+
+    ".D1": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".E1": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".F1": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".G1": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".A1": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".B1": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".C2": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".D2": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".E2": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".F2": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".G2": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".A2": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".B2": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".C3": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".D3": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".E3": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".F3": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".G3": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".A3": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".B3": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".C4": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
 };
