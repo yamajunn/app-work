@@ -197,7 +197,7 @@ const Sample = () => {
         }
     }
 
-    return <Box onKeyDown={(e) => handleKeyDown(e)} sx={{ backgroundColor: backgroundColor, widht: "100%", height: "65%", }}></Box>
+    return <Box onKeyDown={(e) => handleKeyDown(e)} sx={{ backgroundColor: backgroundColor, widht: "100%", height: "65%", }}><Typography></Typography></Box >
 }
 
 export const Main = () => {
