@@ -41,14 +41,14 @@ import B3 from "../../resources/piano/B3.mp3"
 import C4 from "../../resources/piano/C4.mp3"
 
 
-export const Main = () => {
-    const [backgroundColor, setBackgroundColor] = useState('#ffffff')
-    const handleKeyDown = (event: KeyboardEvent) => {
+const Sample = () => {
+    const [backgroundColor, setBackgroundColor] = useState('#000')
+    const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
         if (event.key === 'q') {
             var sound = new Audio(C1);
             sound.play();
 
-            setBackgroundColor("red");
+            setBackgroundColor("#FFF");
         }
         if (event.key === '2') {
             var sound = new Audio(Db1);
@@ -196,11 +196,15 @@ export const Main = () => {
         }
     }
 
+    return <Box onKeyDown={(e) => handleKeyDown(e)} sx={{ backgroundColor: backgroundColor }}></Box>
+}
+
+export const Main = () => {
     return (
         <Box className="Main" sx={sx}>
-            {/* <Sample></Sample> */}
-            <Box className="Piano" tabIndex={0} onKeyDown={handleKeyDown}>
-                <Box className="Piano-black" sx={{ backgroundColor: backgroundColor }}></Box>
+            <Sample></Sample>
+            <Box className="Piano" tabIndex={0}>
+                <Box className="Piano-black"></Box>
                 <Box className="Piano-white">
                     <Box className="C1"></Box>
                     <Box className="D1"></Box>
