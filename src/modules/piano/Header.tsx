@@ -1,10 +1,8 @@
-import { styled, alpha } from '@mui/material/styles';
+import { styled, alpha, SxProps, Theme } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
-import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 
 const Search = styled('div')(({ theme }) => ({
@@ -33,7 +31,7 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
-    color: 'inherit',
+    color: "white",
     '& .MuiInputBase-input': {
         padding: theme.spacing(1, 1, 1, 0),
         // vertical padding + font size from searchIcon
@@ -51,10 +49,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export const Header = () => {
     return (
-        <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static" color="primary">
+        <Box className="Header" sx={sx}>
+            <AppBar position="static" color="transparent">
                 <Toolbar>
-                    <Typography variant='h5' sx={{ width: "5%" }}>検索</Typography>
                     <Search>
                         <SearchIconWrapper>
                             <SearchIcon />
@@ -69,3 +66,10 @@ export const Header = () => {
         </Box>
     );
 }
+const sx: SxProps<Theme> = {
+    "&.Header": {
+        width: "100%",
+        backgroundColor: "#303030",
+    }
+};
+

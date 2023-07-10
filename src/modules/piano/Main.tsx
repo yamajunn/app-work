@@ -1,5 +1,6 @@
 import { Box, SxProps, Theme, Typography } from "@mui/material";
 import { useEffect } from 'react';
+import React, { useState } from 'react';
 
 import C1 from "../../resources/piano/C1.mp3"
 import Db1 from "../../resources/piano/Db1.mp3"
@@ -39,11 +40,15 @@ import Bb3 from "../../resources/piano/Bb3.mp3"
 import B3 from "../../resources/piano/B3.mp3"
 import C4 from "../../resources/piano/C4.mp3"
 
-const Sample = () => {
+
+export const Main = () => {
+    const [backgroundColor, setBackgroundColor] = useState('#ffffff')
     const handleKeyDown = (event: KeyboardEvent) => {
         if (event.key === 'q') {
             var sound = new Audio(C1);
             sound.play();
+
+            setBackgroundColor("red");
         }
         if (event.key === '2') {
             var sound = new Audio(Db1);
@@ -191,17 +196,36 @@ const Sample = () => {
         }
     }
 
-    useEffect(() => {
-        document.addEventListener('keydown', handleKeyDown, false)
-    }, [])
-
-    return <Typography></Typography>
-}
-
-export const Main = () => {
     return (
         <Box className="Main" sx={sx}>
-            <Sample></Sample>
+            {/* <Sample></Sample> */}
+            <Box className="Piano" tabIndex={0} onKeyDown={handleKeyDown}>
+                <Box className="Piano-black" sx={{ backgroundColor: backgroundColor }}></Box>
+                <Box className="Piano-white">
+                    <Box className="C1"></Box>
+                    <Box className="D1"></Box>
+                    <Box className="E1"></Box>
+                    <Box className="F1"></Box>
+                    <Box className="G1"></Box>
+                    <Box className="A1"></Box>
+                    <Box className=""></Box>
+                    <Box className=""></Box>
+                    <Box className=""></Box>
+                    <Box className=""></Box>
+                    <Box className=""></Box>
+                    <Box className=""></Box>
+                    <Box className=""></Box>
+                    <Box className=""></Box>
+                    <Box className=""></Box>
+                    <Box className=""></Box>
+                    <Box className=""></Box>
+                    <Box className=""></Box>
+                    <Box className=""></Box>
+                    <Box className=""></Box>
+                    <Box className=""></Box>
+                    <Box className=""></Box>
+                </Box>
+            </Box>
         </Box>
     );
 };
@@ -209,6 +233,23 @@ export const Main = () => {
 const sx: SxProps<Theme> = {
     "&.Main": {
         width: "100%",
-        height: "100%",
     },
+    ".Piano": {
+        width: "90%",
+        height: "300px",
+        margin: "10% 5% 0"
+    },
+    ".Piano-black": {
+        // backgroundColor: "black",
+        widht: "100%",
+        height: "60%",
+    },
+    ".Piano-white": {
+        backgroundColor: "white",
+        widht: "100%",
+        height: "40%",
+    },
+    ".C1": {
+
+    }
 };
