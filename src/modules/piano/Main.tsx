@@ -2,6 +2,7 @@ import { Box, SxProps, Theme, Typography } from "@mui/material";
 import { useEffect } from 'react';
 import React, { useState } from 'react';
 
+
 import C1 from "../../resources/piano/C1.mp3"
 import Db1 from "../../resources/piano/Db1.mp3"
 import D1 from "../../resources/piano/D1.mp3"
@@ -196,15 +197,14 @@ const Sample = () => {
         }
     }
 
-    return <Box onKeyDown={(e) => handleKeyDown(e)} sx={{ backgroundColor: backgroundColor }}></Box>
+    return <Box onKeyDown={(e) => handleKeyDown(e)} sx={{ backgroundColor: backgroundColor, widht: "100%", height: "65%", }}></Box>
 }
 
 export const Main = () => {
     return (
         <Box className="Main" sx={sx}>
-            <Sample></Sample>
             <Box className="Piano" tabIndex={0}>
-                <Box className="Piano-black"></Box>
+                <Sample></Sample>
                 <Box className="Piano-white">
                     <Box className="C1"></Box>
                     <Box className="D1"></Box>
@@ -239,21 +239,146 @@ const sx: SxProps<Theme> = {
         width: "100%",
     },
     ".Piano": {
-        width: "90%",
+        width: "1333px",
         height: "300px",
-        margin: "10% 5% 0"
-    },
-    ".Piano-black": {
-        // backgroundColor: "black",
-        widht: "100%",
-        height: "60%",
+        margin: "10% auto 0"
     },
     ".Piano-white": {
-        backgroundColor: "white",
+        position: "relative",
         widht: "100%",
-        height: "40%",
+        height: "100%",
+        display: "flex",
     },
     ".C1": {
-        display: "flex",
-    }
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".D1": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".E1": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".F1": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".G1": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".A1": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".B1": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".C2": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".D2": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".E2": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".F2": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".G2": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".A2": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".B2": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".C3": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".D3": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".E3": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".F3": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".G3": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".A3": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".B3": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
+    ".C4": {
+        backgroundColor: "#FFF",
+        width: "59px",
+        height: "100%",
+        border: "1px solid #000",
+    },
 };
