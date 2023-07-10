@@ -1,5 +1,5 @@
 import { Box, SxProps, Theme, Typography } from "@mui/material";
-import { useEffect, VFC } from 'react';
+import { useEffect } from 'react';
 
 import C1 from "../../resources/piano/C1.mp3"
 import Db1 from "../../resources/piano/Db1.mp3"
@@ -39,7 +39,7 @@ import Bb3 from "../../resources/piano/Bb3.mp3"
 import B3 from "../../resources/piano/B3.mp3"
 import C4 from "../../resources/piano/C4.mp3"
 
-const Sample: VFC = () => {
+const Sample = () => {
     const handleKeyDown = (event: KeyboardEvent) => {
         if (event.key === 'q') {
             var sound = new Audio(C1);
@@ -202,10 +202,6 @@ export const Main = () => {
     return (
         <Box className="Main" sx={sx}>
             <Sample></Sample>
-            <Box className="PianoBase">
-                <Box className="Black"></Box>
-                <Box className="White"></Box>
-            </Box>
         </Box>
     );
 };
@@ -214,20 +210,5 @@ const sx: SxProps<Theme> = {
     "&.Main": {
         width: "100%",
         height: "100%",
-    },
-    ".PianoBase": {
-        width: "90%",
-        height: "200px",
-        margin: "300px 5%",
-    },
-    ".Black": {
-        width: "100%",
-        height: "60%",
-        backgroundColor: "black",
-    },
-    ".White": {
-        width: "100%",
-        height: "40%",
-        backgroundColor: "white",
     },
 };

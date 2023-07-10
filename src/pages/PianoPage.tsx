@@ -2,7 +2,6 @@
 import { Box, SxProps, Theme } from "@mui/material";
 
 // 使用するコンポートをインポート
-// import { Header } from "../modules/piano/Header";
 import { Main } from "../modules/piano/Main";
 
 // サンプルページのメインの実装
