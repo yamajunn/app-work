@@ -2,11 +2,13 @@
 import { Box, SxProps, Theme } from "@mui/material";
 
 // 使用するコンポートをインポート
+import { Header } from "../modules/piano/Header";
 
 // サンプルページのメインの実装
 export const PianoPage = () => {
     return (
         <Box className="PianoPage" sx={sx}>
+            <Header />
         </Box>
     );
 };
