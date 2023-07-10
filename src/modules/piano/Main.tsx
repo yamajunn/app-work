@@ -200,8 +200,12 @@ const Sample: VFC = () => {
 
 export const Main = () => {
     return (
-        <Box className="HeMainader" sx={sx}>
+        <Box className="Main" sx={sx}>
             <Sample></Sample>
+            <Box className="PianoBase">
+                <Box className="Black"></Box>
+                <Box className="White"></Box>
+            </Box>
         </Box>
     );
 };
@@ -209,5 +213,21 @@ export const Main = () => {
 const sx: SxProps<Theme> = {
     "&.Main": {
         width: "100%",
+        height: "100%",
+    },
+    ".PianoBase": {
+        width: "90%",
+        height: "200px",
+        margin: "300px 5%",
+    },
+    ".Black": {
+        width: "100%",
+        height: "60%",
+        backgroundColor: "black",
+    },
+    ".White": {
+        width: "100%",
+        height: "40%",
+        backgroundColor: "white",
     },
 };
