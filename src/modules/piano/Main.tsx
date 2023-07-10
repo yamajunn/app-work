@@ -43,12 +43,12 @@ import C4 from "../../resources/piano/C4.mp3"
 
 
 const Sample = () => {
-    const [backgroundColor, setBackgroundColor] = useState('#000')
+    const [C1_, C1__] = useState('#FFF')
     const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
         if (event.key === 'q') {
             var sound = new Audio(C1);
             sound.play();
-            setBackgroundColor("#990000");
+            C1__("#990000");
             resetColor();
         }
         if (event.key === '2') {
@@ -199,43 +199,18 @@ const Sample = () => {
 
     const resetColor = useCallback(() => {
         setTimeout(() => {
-            setBackgroundColor("#000");
-        }, 1000);
-    }, [backgroundColor]);
+            C1__("#FFF");
+        }, 100);
+    }, [C1_]);
 
-    return <Box onKeyDown={(e) => handleKeyDown(e)}
-        sx={{ backgroundColor: backgroundColor, widht: "100%", height: "65%", }}><Typography></Typography></Box >
+    return <Box className="Piano-white"><Box className="C1" onKeyDown={(e) => handleKeyDown(e)} tabIndex={0} sx={{ backgroundColor: C1_, width: "59px", height: "100%", border: "1px solid #000" }}></Box><Box className="D1"></Box><Box className="E1"></Box><Box className="F1"></Box><Box className="G1"></Box><Box className="A1"></Box><Box className="B1"></Box><Box className="C2"></Box><Box className="D2"></Box><Box className="E2"></Box><Box className="F2"></Box><Box className="G2"></Box><Box className="A2"></Box><Box className="B2"></Box><Box className="C3"></Box><Box className="D3"></Box><Box className="E3"></Box><Box className="F3"></Box><Box className="G3"></Box><Box className="A3"></Box><Box className="B3"></Box><Box className="C4"></Box></Box>
 }
 
 export const Main = () => {
     return (
         <Box className="Main" sx={sx}>
-            <Box className="Piano" tabIndex={0}>
+            <Box className="Piano">
                 <Sample></Sample>
-                <Box className="Piano-white">
-                    <Box className="C1"></Box>
-                    <Box className="D1"></Box>
-                    <Box className="E1"></Box>
-                    <Box className="F1"></Box>
-                    <Box className="G1"></Box>
-                    <Box className="A1"></Box>
-                    <Box className="B1"></Box>
-                    <Box className="C2"></Box>
-                    <Box className="D2"></Box>
-                    <Box className="E2"></Box>
-                    <Box className="F2"></Box>
-                    <Box className="G2"></Box>
-                    <Box className="A2"></Box>
-                    <Box className="B2"></Box>
-                    <Box className="C3"></Box>
-                    <Box className="D3"></Box>
-                    <Box className="E3"></Box>
-                    <Box className="F3"></Box>
-                    <Box className="G3"></Box>
-                    <Box className="A3"></Box>
-                    <Box className="B3"></Box>
-                    <Box className="C4"></Box>
-                </Box>
             </Box>
         </Box>
     );
@@ -256,12 +231,7 @@ const sx: SxProps<Theme> = {
         height: "100%",
         display: "flex",
     },
-    ".C1": {
-        backgroundColor: "#FFF",
-        width: "59px",
-        height: "100%",
-        border: "1px solid #000",
-    },
+
     ".D1": {
         backgroundColor: "#FFF",
         width: "59px",
