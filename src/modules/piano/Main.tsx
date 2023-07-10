@@ -48,8 +48,8 @@ const Sample = () => {
         if (event.key === 'q') {
             var sound = new Audio(C1);
             sound.play();
-
             setBackgroundColor("#FFF");
+            resetColor();
         }
         if (event.key === '2') {
             var sound = new Audio(Db1);
