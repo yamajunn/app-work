@@ -40,13 +40,13 @@ import Bb3 from "../../resources/piano/Bb3.mp3";
 import B3 from "../../resources/piano/B3.mp3";
 import C4 from "../../resources/piano/C4.mp3";
 
-export const Main = () => {
-    const [C1_, C1__] = useState("black");
+const Sample = () => {
+    const [C1_, C1__] = useState("#FFF");
     const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
         if (event.key === "q") {
             var sound = new Audio(C1);
             sound.play();
-            C1__("#FFF");
+            C1__("#990000");
             resetColor();
         }
         if (event.key === "2") {
@@ -204,6 +204,15 @@ export const Main = () => {
     return <Box className="Piano-white"><Box className="C1" onKeyDown={(e) => handleKeyDown(e)} tabIndex={0} sx={{ backgroundColor: C1_, width: "59px", height: "100%", border: "1px solid #000" }}></Box><Box className="D1"></Box><Box className="E1"></Box><Box className="F1"></Box><Box className="G1"></Box><Box className="A1"></Box><Box className="B1"></Box><Box className="C2"></Box><Box className="D2"></Box><Box className="E2"></Box><Box className="F2"></Box><Box className="G2"></Box><Box className="A2"></Box><Box className="B2"></Box><Box className="C3"></Box><Box className="D3"></Box><Box className="E3"></Box><Box className="F3"></Box><Box className="G3"></Box><Box className="A3"></Box><Box className="B3"></Box><Box className="C4"></Box></Box>
 }
 
+export const Main = () => {
+    return (
+        <Box className="Main" sx={sx}>
+            <Box className="Piano">
+                <Sample></Sample>
+            </Box>
+        </Box>
+    );
+};
 
 const sx: SxProps<Theme> = {
     "&.Main": {
