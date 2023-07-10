@@ -1,5 +1,5 @@
 import { Box, SxProps, Theme, Typography } from "@mui/material";
-import { useEffect } from 'react';
+import { useEffect, useCallback } from "react";
 import React, { useState } from 'react';
 
 
@@ -48,7 +48,7 @@ const Sample = () => {
         if (event.key === 'q') {
             var sound = new Audio(C1);
             sound.play();
-            setBackgroundColor("#FFF");
+            setBackgroundColor("#990000");
             resetColor();
         }
         if (event.key === '2') {
@@ -203,7 +203,8 @@ const Sample = () => {
         }, 1000);
     }, [backgroundColor]);
 
-    return <Box onKeyDown={(e) => handleKeyDown(e)} sx={{ backgroundColor: backgroundColor, widht: "100%", height: "65%", }}><Typography></Typography></Box >
+    return <Box onKeyDown={(e) => handleKeyDown(e)}
+        sx={{ backgroundColor: backgroundColor, widht: "100%", height: "65%", }}><Typography></Typography></Box >
 }
 
 export const Main = () => {
