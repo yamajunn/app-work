@@ -197,6 +197,12 @@ const Sample = () => {
         }
     }
 
+    const resetColor = useCallback(() => {
+        setTimeout(() => {
+            setBackgroundColor("#000");
+        }, 1000);
+    }, [backgroundColor]);
+
     return <Box onKeyDown={(e) => handleKeyDown(e)} sx={{ backgroundColor: backgroundColor, widht: "100%", height: "65%", }}><Typography></Typography></Box >
 }
 
