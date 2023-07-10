@@ -212,22 +212,22 @@ export const Main = () => {
                     <Box className="F1"></Box>
                     <Box className="G1"></Box>
                     <Box className="A1"></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
-                    <Box className=""></Box>
+                    <Box className="B1"></Box>
+                    <Box className="C2"></Box>
+                    <Box className="D2"></Box>
+                    <Box className="E2"></Box>
+                    <Box className="F2"></Box>
+                    <Box className="G2"></Box>
+                    <Box className="A2"></Box>
+                    <Box className="B2"></Box>
+                    <Box className="C3"></Box>
+                    <Box className="D3"></Box>
+                    <Box className="E3"></Box>
+                    <Box className="F3"></Box>
+                    <Box className="G3"></Box>
+                    <Box className="A3"></Box>
+                    <Box className="B3"></Box>
+                    <Box className="C4"></Box>
                 </Box>
             </Box>
         </Box>
