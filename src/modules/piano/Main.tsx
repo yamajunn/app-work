@@ -254,7 +254,7 @@ export const Main = () => {
     return (
         <Box className="Main" sx={sx}>
             <Sample></Sample>
-            {/* <Button color="error" sx={{ width: "100px", height: "100px", backgroundColor: "#FFF", }}></Button>q */}
+            {/* <Button colorq="error" sx={{ width: "100px", height: "100px", backgroundColor: "#FFF", }}></Button> */}
         </Box>
     );
 };
