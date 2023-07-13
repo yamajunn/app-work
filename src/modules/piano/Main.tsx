@@ -1,6 +1,6 @@
-import { Box, Button, SxProps, Theme, Typography } from "@mui/material";
+import { Box, Button, SxProps, Theme } from "@mui/material";
 import { useEffect, useCallback } from "react";
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import { C1, D1, E1, F1, G1, A1, B1, C2, D2, E2, F2, G2, A2, B2, C3, D3, E3, F3, G3, A3, B3, C4, Db1, Eb1, Gb1, Ab1, Bb1, Db2, Eb2, Gb2, Ab2, Bb2, Db3, Eb3, Gb3, Ab3, Bb3 } from "../../resources/piano/"
 
