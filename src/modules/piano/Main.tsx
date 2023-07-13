@@ -44,6 +44,44 @@ import C4 from "../../resources/piano/C4.mp3"
 
 const Sample = () => {
     const [C1_, C1__] = useState('#FFF')
+    const [D1_, D1__] = useState('#FFF')
+    const [E1_, E1__] = useState('#FFF')
+    const [F1_, F1__] = useState('#FFF')
+    const [G1_, G1__] = useState('#FFF')
+    const [A1_, A1__] = useState('#FFF')
+    const [B1_, B1__] = useState('#FFF')
+    const [C2_, C2__] = useState('#FFF')
+    const [D2_, D2__] = useState('#FFF')
+    const [E2_, E2__] = useState('#FFF')
+    const [F2_, F2__] = useState('#FFF')
+    const [G2_, G2__] = useState('#FFF')
+    const [A2_, A2__] = useState('#FFF')
+    const [B2_, B2__] = useState('#FFF')
+    const [C3_, C3__] = useState('#FFF')
+    const [D3_, D3__] = useState('#FFF')
+    const [E3_, E3__] = useState('#FFF')
+    const [F3_, F3__] = useState('#FFF')
+    const [G3_, G3__] = useState('#FFF')
+    const [A3_, A3__] = useState('#FFF')
+    const [B3_, B3__] = useState('#FFF')
+    const [C4_, C4__] = useState('#FFF')
+
+    const [Db1_, Db1__] = useState('#000')
+    const [Eb1_, Eb1__] = useState('#000')
+    const [Gb1_, Gb1__] = useState('#000')
+    const [Ab1_, Ab1__] = useState('#000')
+    const [Bb1_, Bb1__] = useState('#000')
+    const [Db2_, Db2__] = useState('#000')
+    const [Eb2_, Eb2__] = useState('#000')
+    const [Gb2_, Gb2__] = useState('#000')
+    const [Ab2_, Ab2__] = useState('#000')
+    const [Bb2_, Bb2__] = useState('#000')
+    const [Db3_, Db3__] = useState('#000')
+    const [Eb3_, Eb3__] = useState('#000')
+    const [Gb3_, Gb3__] = useState('#000')
+    const [Ab3_, Ab3__] = useState('#000')
+    const [Bb3_, Bb3__] = useState('#000')
+
     const handleKeyDown = (event: KeyboardEvent) => {
         if (event.key === 'q') {
             var sound = new Audio(C1);
@@ -54,146 +92,218 @@ const Sample = () => {
         if (event.key === '2') {
             var sound = new Audio(Db1);
             sound.play();
+            Db1__("#990000");
+            resetColor();
         }
         if (event.key === 'w') {
             var sound = new Audio(D1);
             sound.play();
+            D1__("#990000");
+            resetColor();
         }
         if (event.key === '3') {
             var sound = new Audio(Eb1);
             sound.play();
+            Eb1__("#990000");
+            resetColor();
         }
         if (event.key === 'e') {
             var sound = new Audio(E1);
             sound.play();
+            E1__("#990000");
+            resetColor();
         }
         if (event.key === 'r') {
             var sound = new Audio(F1);
             sound.play();
+            F1__("#990000");
+            resetColor();
         }
         if (event.key === '5') {
             var sound = new Audio(Gb1);
             sound.play();
+            Gb1__("#990000");
+            resetColor();
         }
         if (event.key === 't') {
             var sound = new Audio(G1);
             sound.play();
+            G1__("#990000");
+            resetColor();
         }
         if (event.key === '6') {
             var sound = new Audio(Ab1);
             sound.play();
+            Ab1__("#990000");
+            resetColor();
         }
         if (event.key === 'y') {
             var sound = new Audio(A1);
             sound.play();
+            A1__("#990000");
+            resetColor();
         }
         if (event.key === '7') {
             var sound = new Audio(Bb1);
             sound.play();
+            Bb1__("#990000");
+            resetColor();
         }
         if (event.key === 'u') {
             var sound = new Audio(B1);
             sound.play();
+            B1__("#990000");
+            resetColor();
         }
         if (event.key === 'i') {
             var sound = new Audio(C2);
             sound.play();
+            C2__("#990000");
+            resetColor();
         }
         if (event.key === '9') {
             var sound = new Audio(Db2);
             sound.play();
+            Db2__("#990000");
+            resetColor();
         }
         if (event.key === 'o') {
             var sound = new Audio(D2);
             sound.play();
+            D2__("#990000");
+            resetColor();
         }
         if (event.key === '0') {
             var sound = new Audio(Eb2);
             sound.play();
+            Eb2__("#990000");
+            resetColor();
         }
         if (event.key === 'p') {
             var sound = new Audio(E2);
             sound.play();
+            E2__("#990000");
+            resetColor();
         }
         if (event.key === '@') {
             var sound = new Audio(F2);
             sound.play();
+            F2__("#990000");
+            resetColor();
         }
         if (event.key === '^') {
             var sound = new Audio(Gb2);
             sound.play();
+            Gb2__("#990000");
+            resetColor();
         }
         if (event.key === '[') {
             var sound = new Audio(G2);
             sound.play();
+            G2__("#990000");
+            resetColor();
         }
         if (event.key === '¥') {
             var sound = new Audio(Ab2);
             sound.play();
+            Ab2__("#990000");
+            resetColor();
         }
         if (event.key === 'z') {
             var sound = new Audio(A2);
             sound.play();
+            A2__("#990000");
+            resetColor();
         }
         if (event.key === 's') {
             var sound = new Audio(Bb2);
             sound.play();
+            Bb2__("#990000");
+            resetColor();
         }
         if (event.key === 'x') {
             var sound = new Audio(B2);
             sound.play();
+            B2__("#990000");
+            resetColor();
         }
         if (event.key === 'c') {
             var sound = new Audio(C3);
             sound.play();
+            C3__("#990000");
+            resetColor();
         }
         if (event.key === 'f') {
             var sound = new Audio(Db3);
             sound.play();
+            Db3__("#990000");
+            resetColor();
         }
         if (event.key === 'v') {
             var sound = new Audio(D3);
             sound.play();
+            D3__("#990000");
+            resetColor();
         }
         if (event.key === 'g') {
             var sound = new Audio(Eb3);
             sound.play();
+            Eb3__("#990000");
+            resetColor();
         }
         if (event.key === 'b') {
             var sound = new Audio(E3);
             sound.play();
+            E3__("#990000");
+            resetColor();
         }
         if (event.key === 'n') {
             var sound = new Audio(F3);
             sound.play();
+            F3__("#990000");
+            resetColor();
         }
         if (event.key === 'j') {
             var sound = new Audio(Gb3);
             sound.play();
+            Gb3__("#990000");
+            resetColor();
         }
         if (event.key === 'm') {
             var sound = new Audio(G3);
             sound.play();
+            G3__("#990000");
+            resetColor();
         }
         if (event.key === 'k') {
             var sound = new Audio(Ab3);
             sound.play();
+            Ab3__("#990000");
+            resetColor();
         }
         if (event.key === ',') {
             var sound = new Audio(A3);
             sound.play();
+            A3__("#990000");
+            resetColor();
         }
         if (event.key === 'l') {
             var sound = new Audio(Bb3);
             sound.play();
+            Bb3__("#990000");
+            resetColor();
         }
         if (event.key === '.') {
             var sound = new Audio(B3);
             sound.play();
+            B3__("#990000");
+            resetColor();
         }
         if (event.key === '/') {
             var sound = new Audio(C4);
             sound.play();
+            C4__("#990000");
+            resetColor();
         }
     }
     useEffect(() => {
@@ -203,51 +313,88 @@ const Sample = () => {
     const resetColor = useCallback(() => {
         setTimeout(() => {
             C1__("#FFF");
+            D1__("#FFF");
+            E1__("#FFF");
+            F1__("#FFF");
+            G1__("#FFF");
+            A1__("#FFF");
+            B1__("#FFF");
+            C2__("#FFF");
+            D2__("#FFF");
+            E2__("#FFF");
+            F2__("#FFF");
+            G2__("#FFF");
+            A2__("#FFF");
+            B2__("#FFF");
+            C3__("#FFF");
+            D3__("#FFF");
+            E3__("#FFF");
+            F3__("#FFF");
+            G3__("#FFF");
+            A3__("#FFF");
+            B3__("#FFF");
+            C4__("#FFF");
+
+            Db1__("#000");
+            Eb1__("#000");
+            Gb1__("#000");
+            Ab1__("#000");
+            Bb1__("#000");
+            Db2__("#000");
+            Eb2__("#000");
+            Gb2__("#000");
+            Ab2__("#000");
+            Bb2__("#000");
+            Db3__("#000");
+            Eb3__("#000");
+            Gb3__("#000");
+            Ab3__("#000");
+            Bb3__("#000");
         }, 100);
-    }, [C1_]);
+    }, [C1_, D1_, E1_, F1_, G1_, A1_, B1_, C2_, D2_, E2_, F2_, G2_, A2_, B2_, C3_, D3_, E3_, F3_, G3_, A3_, B3_, C4_, Db1_, Eb1_, Gb1_, Ab1_, Bb1_, Db2_, Eb2_, Gb2_, Ab2_, Bb2_, Db3_, Eb3_, Gb3_, Ab3_, Bb3_]);
 
     return (
         <Box className="Piano">
             <Box className="Piano-white">
-                <Button className="C1" sx={{ backgroundColor: C1_, width: "59px", height: "100%", border: "1px solid #000", textAlign: "center", }} color="error"></Button>
-                <Button className="D1" color="error"></Button>
-                <Button className="E1" color="error"></Button>
-                <Button className="F1" color="error"></Button>
-                <Button className="G1" color="error"></Button>
-                <Button className="A1" color="error"></Button>
-                <Button className="B1" color="error"></Button>
-                <Button className="C2" color="error"></Button>
-                <Button className="D2" color="error"></Button>
-                <Button className="E2" color="error"></Button>
-                <Button className="F2" color="error"></Button>
-                <Button className="G2" color="error"></Button>
-                <Button className="A2" color="error"></Button>
-                <Button className="B2" color="error"></Button>
-                <Button className="C3" color="error"></Button>
-                <Button className="D3" color="error"></Button>
-                <Button className="E3" color="error"></Button>
-                <Button className="F3" color="error"></Button>
-                <Button className="G3" color="error"></Button>
-                <Button className="A3" color="error"></Button>
-                <Button className="B3" color="error"></Button>
-                <Button className="C4" color="error"></Button>
+                <Button className="C1" variant="contained" sx={{ backgroundColor: C1_, border: "1px solid #000", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="D1" variant="contained" sx={{ backgroundColor: D1_, border: "1px solid #000", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="E1" variant="contained" sx={{ backgroundColor: E1_, border: "1px solid #000", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="F1" variant="contained" sx={{ backgroundColor: F1_, border: "1px solid #000", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="G1" variant="contained" sx={{ backgroundColor: G1_, border: "1px solid #000", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="A1" variant="contained" sx={{ backgroundColor: A1_, border: "1px solid #000", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="B1" variant="contained" sx={{ backgroundColor: B1_, border: "1px solid #000", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="C2" variant="contained" sx={{ backgroundColor: C2_, border: "1px solid #000", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="D2" variant="contained" sx={{ backgroundColor: D2_, border: "1px solid #000", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="E2" variant="contained" sx={{ backgroundColor: E2_, border: "1px solid #000", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="F2" variant="contained" sx={{ backgroundColor: F2_, border: "1px solid #000", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="G2" variant="contained" sx={{ backgroundColor: G2_, border: "1px solid #000", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="A2" variant="contained" sx={{ backgroundColor: A2_, border: "1px solid #000", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="B2" variant="contained" sx={{ backgroundColor: B2_, border: "1px solid #000", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="C3" variant="contained" sx={{ backgroundColor: C3_, border: "1px solid #000", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="D3" variant="contained" sx={{ backgroundColor: D3_, border: "1px solid #000", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="E3" variant="contained" sx={{ backgroundColor: E3_, border: "1px solid #000", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="F3" variant="contained" sx={{ backgroundColor: F3_, border: "1px solid #000", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="G3" variant="contained" sx={{ backgroundColor: G3_, border: "1px solid #000", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="A3" variant="contained" sx={{ backgroundColor: A3_, border: "1px solid #000", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="B3" variant="contained" sx={{ backgroundColor: B3_, border: "1px solid #000", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="C4" variant="contained" sx={{ backgroundColor: C4_, border: "1px solid #000", "&:hover": { opacity: 1 } }} color="error"></Button>
             </Box>
             <Box className="Piano-black">
-                <Button className="Db1" color="error"></Button>
-                <Button className="Eb1" color="error"></Button>
-                <Button className="Gb1" color="error"></Button>
-                <Button className="Ab1" color="error"></Button>
-                <Button className="Bb1" color="error"></Button>
-                <Button className="Db2" color="error"></Button>
-                <Button className="Eb2" color="error"></Button>
-                <Button className="Gb2" color="error"></Button>
-                <Button className="Ab2" color="error"></Button>
-                <Button className="Bb2" color="error"></Button>
-                <Button className="Db3" color="error"></Button>
-                <Button className="Eb3" color="error"></Button>
-                <Button className="Gb3" color="error"></Button>
-                <Button className="Ab3" color="error"></Button>
-                <Button className="Bb3" color="error"></Button>
+                <Button className="Db1" variant="contained" sx={{ backgroundColor: Db1_, border: "1px solid #000", margin: "0 0 0 30px", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="Eb1" variant="contained" sx={{ backgroundColor: Eb1_, border: "1px solid #000", margin: "0 0 0 5px", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="Gb1" variant="contained" sx={{ backgroundColor: Gb1_, border: "1px solid #000", margin: "0 0 0 55px", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="Ab1" variant="contained" sx={{ backgroundColor: Ab1_, border: "1px solid #000", margin: "0 0 0 5px", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="Bb1" variant="contained" sx={{ backgroundColor: Bb1_, border: "1px solid #000", margin: "0 0 0 5px", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="Db2" variant="contained" sx={{ backgroundColor: Db2_, border: "1px solid #000", margin: "0 0 0 55px", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="Eb2" variant="contained" sx={{ backgroundColor: Eb2_, border: "1px solid #000", margin: "0 0 0 5px", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="Gb2" variant="contained" sx={{ backgroundColor: Gb2_, border: "1px solid #000", margin: "0 0 0 55px", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="Ab2" variant="contained" sx={{ backgroundColor: Ab2_, border: "1px solid #000", margin: "0 0 0 5px", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="Bb2" variant="contained" sx={{ backgroundColor: Bb2_, border: "1px solid #000", margin: "0 0 0 5px", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="Db3" variant="contained" sx={{ backgroundColor: Db3_, border: "1px solid #000", margin: "0 0 0 55px", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="Eb3" variant="contained" sx={{ backgroundColor: Eb3_, border: "1px solid #000", margin: "0 0 0 5px", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="Gb3" variant="contained" sx={{ backgroundColor: Gb3_, border: "1px solid #000", margin: "0 0 0 55px", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="Ab3" variant="contained" sx={{ backgroundColor: Ab3_, border: "1px solid #000", margin: "0 0 0 5px", "&:hover": { opacity: 1 } }} color="error"></Button>
+                <Button className="Bb3" variant="contained" sx={{ backgroundColor: Bb3_, border: "1px solid #000", margin: "0 0 0 5px", "&:hover": { opacity: 1 } }} color="error"></Button>
             </Box>
         </Box>
     );
@@ -257,7 +404,6 @@ export const Main = () => {
     return (
         <Box className="Main" sx={sx}>
             <Sample></Sample>
-            {/* <Button colorq="error" sx={{ width: "100px", height: "100px", backgroundColor: "#FFF", }}></Button> */}
         </Box>
     );
 };
@@ -277,247 +423,10 @@ const sx: SxProps<Theme> = {
         height: "400px",
         display: "flex",
     },
-    ".D1": {
-        backgroundColor: "#FFF",
-        width: "10px",
-        height: "100%",
-        border: "1px solid #000",
-        textAlign: "center",
-    },
-    ".E1": {
-        backgroundColor: "#FFF",
-        width: "50px",
-        height: "100%",
-        border: "1px solid #000",
-        textAlign: "center",
-    },
-    ".F1": {
-        backgroundColor: "#FFF",
-        width: "50px",
-        height: "100%",
-        border: "1px solid #000",
-        textAlign: "center",
-    },
-    ".G1": {
-        backgroundColor: "#FFF",
-        width: "50px",
-        height: "100%",
-        border: "1px solid #000",
-        textAlign: "center",
-    },
-    ".A1": {
-        backgroundColor: "#FFF",
-        width: "50px",
-        height: "100%",
-        border: "1px solid #000",
-        textAlign: "center",
-    },
-    ".B1": {
-        backgroundColor: "#FFF",
-        width: "50px",
-        height: "100%",
-        border: "1px solid #000",
-        textAlign: "center",
-    },
-    ".C2": {
-        backgroundColor: "#FFF",
-        width: "50px",
-        height: "100%",
-        border: "1px solid #000",
-        textAlign: "center",
-    },
-    ".D2": {
-        backgroundColor: "#FFF",
-        width: "50px",
-        height: "100%",
-        border: "1px solid #000",
-        textAlign: "center",
-    },
-    ".E2": {
-        backgroundColor: "#FFF",
-        width: "50px",
-        height: "100%",
-        border: "1px solid #000",
-        textAlign: "center",
-    },
-    ".F2": {
-        backgroundColor: "#FFF",
-        width: "50px",
-        height: "100%",
-        border: "1px solid #000",
-        textAlign: "center",
-    },
-    ".G2": {
-        backgroundColor: "#FFF",
-        width: "50px",
-        height: "100%",
-        border: "1px solid #000",
-        textAlign: "center",
-    },
-    ".A2": {
-        backgroundColor: "#FFF",
-        width: "50px",
-        height: "100%",
-        border: "1px solid #000",
-        textAlign: "center",
-    },
-    ".B2": {
-        backgroundColor: "#FFF",
-        width: "50px",
-        height: "100%",
-        border: "1px solid #000",
-        textAlign: "center",
-    },
-    ".C3": {
-        backgroundColor: "#FFF",
-        width: "50px",
-        height: "100%",
-        border: "1px solid #000",
-        textAlign: "center",
-    },
-    ".D3": {
-        backgroundColor: "#FFF",
-        width: "50px",
-        height: "100%",
-        border: "1px solid #000",
-        textAlign: "center",
-    },
-    ".E3": {
-        backgroundColor: "#FFF",
-        width: "50px",
-        height: "100%",
-        border: "1px solid #000",
-        textAlign: "center",
-    },
-    ".F3": {
-        backgroundColor: "#FFF",
-        width: "50px",
-        height: "100%",
-        border: "1px solid #000",
-        textAlign: "center",
-    },
-    ".G3": {
-        backgroundColor: "#FFF",
-        width: "50px",
-        height: "100%",
-        border: "1px solid #000",
-        textAlign: "center",
-    },
-    ".A3": {
-        backgroundColor: "#FFF",
-        width: "50px",
-        height: "100%",
-        border: "1px solid #000",
-        textAlign: "center",
-    },
-    ".B3": {
-        backgroundColor: "#FFF",
-        width: "50px",
-        height: "100%",
-        border: "1px solid #000",
-        textAlign: "center",
-    },
-    ".C4": {
-        backgroundColor: "#FFF",
-        width: "50px",
-        height: "100%",
-        border: "1px solid #000",
-        textAlign: "center",
-    },
     ".Piano-black": {
         position: "relative",
         width: "100%",
-        height: "70%",
+        height: "95%",
         display: "flex",
-    },
-    ".Db1": {
-        backgroundColor: "#000",
-        width: "20px",
-        height: "280px",
-        margin: "0 0 0 30px",
-    },
-    ".Eb1": {
-        backgroundColor: "#000",
-        width: "40px",
-        height: "280px",
-        margin: "0 0 0 5px",
-    },
-    ".Gb1": {
-        backgroundColor: "#000",
-        width: "40px",
-        height: "280px",
-        margin: "0 0 0 55px",
-    },
-    ".Ab1": {
-        backgroundColor: "#000",
-        width: "40px",
-        height: "280px",
-        margin: "0 0 0 5px",
-    },
-    ".Bb1": {
-        backgroundColor: "#000",
-        width: "40px",
-        height: "280px",
-        margin: "0 0 0 5px",
-    },
-    ".Db2": {
-        backgroundColor: "#000",
-        width: "40px",
-        height: "280px",
-        margin: "0 0 0 55px",
-    },
-    ".Eb2": {
-        backgroundColor: "#000",
-        width: "40px",
-        height: "280px",
-        margin: "0 0 0 5px",
-    },
-    ".Gb2": {
-        backgroundColor: "#000",
-        width: "40px",
-        height: "280px",
-        margin: "0 0 0 55px",
-    },
-    ".Ab2": {
-        backgroundColor: "#000",
-        width: "40px",
-        height: "280px",
-        margin: "0 0 0 5px",
-    },
-    ".Bb2": {
-        backgroundColor: "#000",
-        width: "40px",
-        height: "280px",
-        margin: "0 0 0 5px",
-    },
-    ".Db3": {
-        backgroundColor: "#000",
-        width: "40px",
-        height: "280px",
-        margin: "0 0 0 55px",
-    },
-    ".Eb3": {
-        backgroundColor: "#000",
-        width: "40px",
-        height: "280px",
-        margin: "0 0 0 5px",
-    },
-    ".Gb3": {
-        backgroundColor: "#000",
-        width: "40px",
-        height: "280px",
-        margin: "0 0 0 55px",
-    },
-    ".Ab3": {
-        backgroundColor: "#000",
-        width: "40px",
-        height: "280px",
-        margin: "0 0 0 5px",
-    },
-    ".Bb3": {
-        backgroundColor: "#000",
-        width: "40px",
-        height: "280px",
-        margin: "0 0 0 5px",
     },
 };
