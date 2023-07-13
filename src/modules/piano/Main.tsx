@@ -1,4 +1,4 @@
-import { Box, SxProps, Theme, Typography } from "@mui/material";
+import { Box, Button, SxProps, Theme, Typography } from "@mui/material";
 import { useEffect, useCallback } from "react";
 import React, { useState } from 'react';
 
@@ -44,7 +44,7 @@ import C4 from "../../resources/piano/C4.mp3"
 
 const Sample = () => {
     const [C1_, C1__] = useState('#FFF')
-    const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    const handleKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
         if (event.key === 'q') {
             var sound = new Audio(C1);
             sound.play();
@@ -203,15 +203,58 @@ const Sample = () => {
         }, 100);
     }, [C1_]);
 
-    return <Box className="Piano-white"><Box className="C1" onKeyDown={(e) => handleKeyDown(e)} tabIndex={0} sx={{ backgroundColor: C1_, width: "59px", height: "100%", border: "1px solid #000" }}></Box><Box className="D1"></Box><Box className="E1"></Box><Box className="F1"></Box><Box className="G1"></Box><Box className="A1"></Box><Box className="B1"></Box><Box className="C2"></Box><Box className="D2"></Box><Box className="E2"></Box><Box className="F2"></Box><Box className="G2"></Box><Box className="A2"></Box><Box className="B2"></Box><Box className="C3"></Box><Box className="D3"></Box><Box className="E3"></Box><Box className="F3"></Box><Box className="G3"></Box><Box className="A3"></Box><Box className="B3"></Box><Box className="C4"></Box></Box>
+    return (
+        <Box className="Piano">
+            <Box className="Piano-white">
+                <Button className="C1" onKeyDown={(e) => handleKeyDown(e)} tabIndex={0} sx={{ backgroundColor: C1_, width: "59px", height: "100%", border: "1px solid #000", textAlign: "center", }} color="error"></Button>
+                <Button className="D1" color="error"></Button>
+                <Button className="E1" color="error"></Button>
+                <Button className="F1" color="error"></Button>
+                <Button className="G1" color="error"></Button>
+                <Button className="A1" color="error"></Button>
+                <Button className="B1" color="error"></Button>
+                <Button className="C2" color="error"></Button>
+                <Button className="D2" color="error"></Button>
+                <Button className="E2" color="error"></Button>
+                <Button className="F2" color="error"></Button>
+                <Button className="G2" color="error"></Button>
+                <Button className="A2" color="error"></Button>
+                <Button className="B2" color="error"></Button>
+                <Button className="C3" color="error"></Button>
+                <Button className="D3" color="error"></Button>
+                <Button className="E3" color="error"></Button>
+                <Button className="F3" color="error"></Button>
+                <Button className="G3" color="error"></Button>
+                <Button className="A3" color="error"></Button>
+                <Button className="B3" color="error"></Button>
+                <Button className="C4" color="error"></Button>
+            </Box>
+            <Box className="Piano-black">
+                <Button className="Db1" color="error"></Button>
+                <Button className="Eb1" color="error"></Button>
+                <Button className="Gb1" color="error"></Button>
+                <Button className="Ab1" color="error"></Button>
+                <Button className="Bb1" color="error"></Button>
+                <Button className="Db2" color="error"></Button>
+                <Button className="Eb2" color="error"></Button>
+                <Button className="Gb2" color="error"></Button>
+                <Button className="Ab2" color="error"></Button>
+                <Button className="Bb2" color="error"></Button>
+                <Button className="Db3" color="error"></Button>
+                <Button className="Eb3" color="error"></Button>
+                <Button className="Gb3" color="error"></Button>
+                <Button className="Ab3" color="error"></Button>
+                <Button className="Bb3" color="error"></Button>
+            </Box>
+        </Box>
+    );
 }
 
 export const Main = () => {
     return (
         <Box className="Main" sx={sx}>
-            <Box className="Piano">
-                <Sample></Sample>
-            </Box>
+            <Sample></Sample>
+            {/* <Button color="error" sx={{ width: "100px", height: "100px", backgroundColor: "#FFF", }}></Button>q */}
         </Box>
     );
 };
@@ -223,139 +266,255 @@ const sx: SxProps<Theme> = {
     ".Piano": {
         width: "1333px",
         height: "300px",
-        margin: "10% auto 0"
+        margin: "10% 1% 0"
     },
     ".Piano-white": {
-        position: "relative",
+        position: "absolute",
         widht: "100%",
-        height: "100%",
+        height: "400px",
         display: "flex",
     },
-
     ".D1": {
         backgroundColor: "#FFF",
-        width: "59px",
+        width: "10px",
         height: "100%",
         border: "1px solid #000",
+        textAlign: "center",
     },
     ".E1": {
         backgroundColor: "#FFF",
-        width: "59px",
+        width: "50px",
         height: "100%",
         border: "1px solid #000",
+        textAlign: "center",
     },
     ".F1": {
         backgroundColor: "#FFF",
-        width: "59px",
+        width: "50px",
         height: "100%",
         border: "1px solid #000",
+        textAlign: "center",
     },
     ".G1": {
         backgroundColor: "#FFF",
-        width: "59px",
+        width: "50px",
         height: "100%",
         border: "1px solid #000",
+        textAlign: "center",
     },
     ".A1": {
         backgroundColor: "#FFF",
-        width: "59px",
+        width: "50px",
         height: "100%",
         border: "1px solid #000",
+        textAlign: "center",
     },
     ".B1": {
         backgroundColor: "#FFF",
-        width: "59px",
+        width: "50px",
         height: "100%",
         border: "1px solid #000",
+        textAlign: "center",
     },
     ".C2": {
         backgroundColor: "#FFF",
-        width: "59px",
+        width: "50px",
         height: "100%",
         border: "1px solid #000",
+        textAlign: "center",
     },
     ".D2": {
         backgroundColor: "#FFF",
-        width: "59px",
+        width: "50px",
         height: "100%",
         border: "1px solid #000",
+        textAlign: "center",
     },
     ".E2": {
         backgroundColor: "#FFF",
-        width: "59px",
+        width: "50px",
         height: "100%",
         border: "1px solid #000",
+        textAlign: "center",
     },
     ".F2": {
         backgroundColor: "#FFF",
-        width: "59px",
+        width: "50px",
         height: "100%",
         border: "1px solid #000",
+        textAlign: "center",
     },
     ".G2": {
         backgroundColor: "#FFF",
-        width: "59px",
+        width: "50px",
         height: "100%",
         border: "1px solid #000",
+        textAlign: "center",
     },
     ".A2": {
         backgroundColor: "#FFF",
-        width: "59px",
+        width: "50px",
         height: "100%",
         border: "1px solid #000",
+        textAlign: "center",
     },
     ".B2": {
         backgroundColor: "#FFF",
-        width: "59px",
+        width: "50px",
         height: "100%",
         border: "1px solid #000",
+        textAlign: "center",
     },
     ".C3": {
         backgroundColor: "#FFF",
-        width: "59px",
+        width: "50px",
         height: "100%",
         border: "1px solid #000",
+        textAlign: "center",
     },
     ".D3": {
         backgroundColor: "#FFF",
-        width: "59px",
+        width: "50px",
         height: "100%",
         border: "1px solid #000",
+        textAlign: "center",
     },
     ".E3": {
         backgroundColor: "#FFF",
-        width: "59px",
+        width: "50px",
         height: "100%",
         border: "1px solid #000",
+        textAlign: "center",
     },
     ".F3": {
         backgroundColor: "#FFF",
-        width: "59px",
+        width: "50px",
         height: "100%",
         border: "1px solid #000",
+        textAlign: "center",
     },
     ".G3": {
         backgroundColor: "#FFF",
-        width: "59px",
+        width: "50px",
         height: "100%",
         border: "1px solid #000",
+        textAlign: "center",
     },
     ".A3": {
         backgroundColor: "#FFF",
-        width: "59px",
+        width: "50px",
         height: "100%",
         border: "1px solid #000",
+        textAlign: "center",
     },
     ".B3": {
         backgroundColor: "#FFF",
-        width: "59px",
+        width: "50px",
         height: "100%",
         border: "1px solid #000",
+        textAlign: "center",
     },
     ".C4": {
         backgroundColor: "#FFF",
-        width: "59px",
+        width: "50px",
         height: "100%",
         border: "1px solid #000",
+        textAlign: "center",
+    },
+    ".Piano-black": {
+        position: "relative",
+        width: "100%",
+        height: "70%",
+        display: "flex",
+    },
+    ".Db1": {
+        backgroundColor: "#000",
+        width: "20px",
+        height: "280px",
+        margin: "0 0 0 30px",
+    },
+    ".Eb1": {
+        backgroundColor: "#000",
+        width: "40px",
+        height: "280px",
+        margin: "0 0 0 5px",
+    },
+    ".Gb1": {
+        backgroundColor: "#000",
+        width: "40px",
+        height: "280px",
+        margin: "0 0 0 55px",
+    },
+    ".Ab1": {
+        backgroundColor: "#000",
+        width: "40px",
+        height: "280px",
+        margin: "0 0 0 5px",
+    },
+    ".Bb1": {
+        backgroundColor: "#000",
+        width: "40px",
+        height: "280px",
+        margin: "0 0 0 5px",
+    },
+    ".Db2": {
+        backgroundColor: "#000",
+        width: "40px",
+        height: "280px",
+        margin: "0 0 0 55px",
+    },
+    ".Eb2": {
+        backgroundColor: "#000",
+        width: "40px",
+        height: "280px",
+        margin: "0 0 0 5px",
+    },
+    ".Gb2": {
+        backgroundColor: "#000",
+        width: "40px",
+        height: "280px",
+        margin: "0 0 0 55px",
+    },
+    ".Ab2": {
+        backgroundColor: "#000",
+        width: "40px",
+        height: "280px",
+        margin: "0 0 0 5px",
+    },
+    ".Bb2": {
+        backgroundColor: "#000",
+        width: "40px",
+        height: "280px",
+        margin: "0 0 0 5px",
+    },
+    ".Db3": {
+        backgroundColor: "#000",
+        width: "40px",
+        height: "280px",
+        margin: "0 0 0 55px",
+    },
+    ".Eb3": {
+        backgroundColor: "#000",
+        width: "40px",
+        height: "280px",
+        margin: "0 0 0 5px",
+    },
+    ".Gb3": {
+        backgroundColor: "#000",
+        width: "40px",
+        height: "280px",
+        margin: "0 0 0 55px",
+    },
+    ".Ab3": {
+        backgroundColor: "#000",
+        width: "40px",
+        height: "280px",
+        margin: "0 0 0 5px",
+    },
+    ".Bb3": {
+        backgroundColor: "#000",
+        width: "40px",
+        height: "280px",
+        margin: "0 0 0 5px",
     },
 };
