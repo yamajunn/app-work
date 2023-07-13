@@ -44,7 +44,7 @@ import C4 from "../../resources/piano/C4.mp3"
 
 const Sample = () => {
     const [C1_, C1__] = useState('#FFF')
-    const handleKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
+    const handleKeyDown = (event: KeyboardEvent) => {
         if (event.key === 'q') {
             var sound = new Audio(C1);
             sound.play();
@@ -196,6 +196,9 @@ const Sample = () => {
             sound.play();
         }
     }
+    useEffect(() => {
+        document.addEventListener('keydown', handleKeyDown, false)
+    }, [])
 
     const resetColor = useCallback(() => {
         setTimeout(() => {
@@ -206,7 +209,7 @@ const Sample = () => {
     return (
         <Box className="Piano">
             <Box className="Piano-white">
-                <Button className="C1" onKeyDown={(e) => handleKeyDown(e)} tabIndex={0} sx={{ backgroundColor: C1_, width: "59px", height: "100%", border: "1px solid #000", textAlign: "center", }} color="error"></Button>
+                <Button className="C1" sx={{ backgroundColor: C1_, width: "59px", height: "100%", border: "1px solid #000", textAlign: "center", }} color="error"></Button>
                 <Button className="D1" color="error"></Button>
                 <Button className="E1" color="error"></Button>
                 <Button className="F1" color="error"></Button>
