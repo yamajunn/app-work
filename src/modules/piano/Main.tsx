@@ -1,5 +1,5 @@
 import { Box, Button, SxProps, Theme } from "@mui/material";
-import { useEffect, useCallback } from "react";
+import React, { useEffect, useCallback, SetStateAction } from "react";
 import { useState } from 'react';
 
 import { C1, D1, E1, F1, G1, A1, B1, C2, D2, E2, F2, G2, A2, B2, C3, D3, E3, F3, G3, A3, B3, C4, Db1, Eb1, Gb1, Ab1, Bb1, Db2, Eb2, Gb2, Ab2, Bb2, Db3, Eb3, Gb3, Ab3, Bb3 } from "../../resources/piano/"
@@ -26,115 +26,115 @@ const Sample = () => {
         }
         if (piano_count === 0) {
             if (event.key === 'q') {
-                var sound = new Audio(C1); sound.play(); C1__("#990000"); resetColor();
+                let sound = new Audio(C1); sound.play(); C1__("#990000"); resetColor();
             }
             if (event.key === '2') {
-                var sound = new Audio(Db1); sound.play(); Db1__("#990000"); resetColor();
+                let sound = new Audio(Db1); sound.play(); Db1__("#990000"); resetColor();
             }
             if (event.key === 'w') {
-                var sound = new Audio(D1); sound.play(); D1__("#990000"); resetColor();
+                let sound = new Audio(D1); sound.play(); D1__("#990000"); resetColor();
             }
             if (event.key === '3') {
-                var sound = new Audio(Eb1); sound.play(); Eb1__("#990000"); resetColor();
+                let sound = new Audio(Eb1); sound.play(); Eb1__("#990000"); resetColor();
             }
             if (event.key === 'e') {
-                var sound = new Audio(E1); sound.play(); E1__("#990000"); resetColor();
+                let sound = new Audio(E1); sound.play(); E1__("#990000"); resetColor();
             }
             if (event.key === 'r') {
-                var sound = new Audio(F1); sound.play(); F1__("#990000"); resetColor();
+                let sound = new Audio(F1); sound.play(); F1__("#990000"); resetColor();
             }
             if (event.key === '5') {
-                var sound = new Audio(Gb1); sound.play(); Gb1__("#990000"); resetColor();
+                let sound = new Audio(Gb1); sound.play(); Gb1__("#990000"); resetColor();
             }
             if (event.key === 't') {
-                var sound = new Audio(G1); sound.play(); G1__("#990000"); resetColor();
+                let sound = new Audio(G1); sound.play(); G1__("#990000"); resetColor();
             }
             if (event.key === '6') {
-                var sound = new Audio(Ab1); sound.play(); Ab1__("#990000"); resetColor();
+                let sound = new Audio(Ab1); sound.play(); Ab1__("#990000"); resetColor();
             }
             if (event.key === 'y') {
-                var sound = new Audio(A1); sound.play(); A1__("#990000"); resetColor();
+                let sound = new Audio(A1); sound.play(); A1__("#990000"); resetColor();
             }
             if (event.key === '7') {
-                var sound = new Audio(Bb1); sound.play(); Bb1__("#990000"); resetColor();
+                let sound = new Audio(Bb1); sound.play(); Bb1__("#990000"); resetColor();
             }
             if (event.key === 'u') {
-                var sound = new Audio(B1); sound.play(); B1__("#990000"); resetColor();
+                let sound = new Audio(B1); sound.play(); B1__("#990000"); resetColor();
             }
             if (event.key === 'i') {
-                var sound = new Audio(C2); sound.play(); C2__("#990000"); resetColor();
+                let sound = new Audio(C2); sound.play(); C2__("#990000"); resetColor();
             }
             if (event.key === '9') {
-                var sound = new Audio(Db2); sound.play(); Db2__("#990000"); resetColor();
+                let sound = new Audio(Db2); sound.play(); Db2__("#990000"); resetColor();
             }
             if (event.key === 'o') {
-                var sound = new Audio(D2); sound.play(); D2__("#990000"); resetColor();
+                let sound = new Audio(D2); sound.play(); D2__("#990000"); resetColor();
             }
             if (event.key === '0') {
-                var sound = new Audio(Eb2); sound.play(); Eb2__("#990000"); resetColor();
+                let sound = new Audio(Eb2); sound.play(); Eb2__("#990000"); resetColor();
             }
             if (event.key === 'p') {
-                var sound = new Audio(E2); sound.play(); E2__("#990000"); resetColor();
+                let sound = new Audio(E2); sound.play(); E2__("#990000"); resetColor();
             }
             if (event.key === '@') {
-                var sound = new Audio(F2); sound.play(); F2__("#990000"); resetColor();
+                let sound = new Audio(F2); sound.play(); F2__("#990000"); resetColor();
             }
             if (event.key === '^') {
-                var sound = new Audio(Gb2); sound.play(); Gb2__("#990000"); resetColor();
+                let sound = new Audio(Gb2); sound.play(); Gb2__("#990000"); resetColor();
             }
             if (event.key === '[') {
-                var sound = new Audio(G2); sound.play(); G2__("#990000"); resetColor();
+                let sound = new Audio(G2); sound.play(); G2__("#990000"); resetColor();
             }
             if (event.key === '¥') {
-                var sound = new Audio(Ab2); sound.play(); Ab2__("#990000"); resetColor();
+                let sound = new Audio(Ab2); sound.play(); Ab2__("#990000"); resetColor();
             }
             if (event.key === 'z') {
-                var sound = new Audio(A2); sound.play(); A2__("#990000"); resetColor();
+                let sound = new Audio(A2); sound.play(); A2__("#990000"); resetColor();
             }
             if (event.key === 's') {
-                var sound = new Audio(Bb2); sound.play(); Bb2__("#990000"); resetColor();
+                let sound = new Audio(Bb2); sound.play(); Bb2__("#990000"); resetColor();
             }
             if (event.key === 'x') {
-                var sound = new Audio(B2); sound.play(); B2__("#990000"); resetColor();
+                let sound = new Audio(B2); sound.play(); B2__("#990000"); resetColor();
             }
             if (event.key === 'c') {
-                var sound = new Audio(C3); sound.play(); C3__("#990000"); resetColor();
+                let sound = new Audio(C3); sound.play(); C3__("#990000"); resetColor();
             }
             if (event.key === 'f') {
-                var sound = new Audio(Db3); sound.play(); Db3__("#990000"); resetColor();
+                let sound = new Audio(Db3); sound.play(); Db3__("#990000"); resetColor();
             }
             if (event.key === 'v') {
-                var sound = new Audio(D3); sound.play(); D3__("#990000"); resetColor();
+                let sound = new Audio(D3); sound.play(); D3__("#990000"); resetColor();
             }
             if (event.key === 'g') {
-                var sound = new Audio(Eb3); sound.play(); Eb3__("#990000"); resetColor();
+                let sound = new Audio(Eb3); sound.play(); Eb3__("#990000"); resetColor();
             }
             if (event.key === 'b') {
-                var sound = new Audio(E3); sound.play(); E3__("#990000"); resetColor();
+                let sound = new Audio(E3); sound.play(); E3__("#990000"); resetColor();
             }
             if (event.key === 'n') {
-                var sound = new Audio(F3); sound.play(); F3__("#990000"); resetColor();
+                let sound = new Audio(F3); sound.play(); F3__("#990000"); resetColor();
             }
             if (event.key === 'j') {
-                var sound = new Audio(Gb3); sound.play(); Gb3__("#990000"); resetColor();
+                let sound = new Audio(Gb3); sound.play(); Gb3__("#990000"); resetColor();
             }
             if (event.key === 'm') {
-                var sound = new Audio(G3); sound.play(); G3__("#990000"); resetColor();
+                let sound = new Audio(G3); sound.play(); G3__("#990000"); resetColor();
             }
             if (event.key === 'k') {
-                var sound = new Audio(Ab3); sound.play(); Ab3__("#990000"); resetColor();
+                let sound = new Audio(Ab3); sound.play(); Ab3__("#990000"); resetColor();
             }
             if (event.key === ',') {
-                var sound = new Audio(A3); sound.play(); A3__("#990000"); resetColor();
+                let sound = new Audio(A3); sound.play(); A3__("#990000"); resetColor();
             }
             if (event.key === 'l') {
-                var sound = new Audio(Bb3); sound.play(); Bb3__("#990000"); resetColor();
+                let sound = new Audio(Bb3); sound.play(); Bb3__("#990000"); resetColor();
             }
             if (event.key === '.') {
-                var sound = new Audio(B3); sound.play(); B3__("#990000"); resetColor();
+                let sound = new Audio(B3); sound.play(); B3__("#990000"); resetColor();
             }
             if (event.key === '/') {
-                var sound = new Audio(C4); sound.play(); C4__("#990000"); resetColor();
+                let sound = new Audio(C4); sound.play(); C4__("#990000"); resetColor();
             }
         }
     }
