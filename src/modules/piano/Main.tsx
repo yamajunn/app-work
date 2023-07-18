@@ -1,9 +1,17 @@
 import { Box, Button, SxProps, Theme } from "@mui/material";
 import React, { useEffect, useCallback, SetStateAction } from "react";
 import { useState } from 'react';
+import { C1, D1, E1, F1, G1, A1, B1, C2, D2, E2, F2, G2, A2, B2, C3, D3, E3, F3, G3, A3, B3, C4, D4, E4, F4, G4, A4, B4, C5, D5, E5, F5, G5, A5, B5, C6, D6, E6, F6, G6, A6, B6, C7, D7, E7, F7, G7, A7, B7, C8, Db1, Eb1, Gb1, Ab1, Bb1, Db2, Eb2, Gb2, Ab2, Bb2, Db3, Eb3, Gb3, Ab3, Bb3, Db4, Eb4, Gb4, Ab4, Bb4, Db5, Eb5, Gb5, Ab5, Bb5, Db6, Eb6, Gb6, Ab6, Bb6, Db7, Eb7, Gb7, Ab7, Bb7, } from "../../resources/piano/";
 
-import { C1, D1, E1, F1, G1, A1, B1, C2, D2, E2, F2, G2, A2, B2, C3, D3, E3, F3, G3, A3, B3, C4, D4, E4, F4, G4, A4, B4, C5, D5, E5, F5, G5, A5, B5, C6, D6, E6, F6, G6, A6, B6, C7, D7, E7, F7, G7, A7, B7, C8, Db1, Eb1, Gb1, Ab1, Bb1, Db2, Eb2, Gb2, Ab2, Bb2, Db3, Eb3, Gb3, Ab3, Bb3, Db4, Eb4, Gb4, Ab4, Bb4, Db5, Eb5, Gb5, Ab5, Bb5, Db6, Eb6, Gb6, Ab6, Bb6, Db7, Eb7, Gb7, Ab7, Bb7, } from "../../resources/piano/"
-
+const saveToFile = (content: string) => {
+    const element = document.createElement('a');
+    const file = new Blob([content], { type: 'text/plain' });
+    element.href = URL.createObjectURL(file);
+    element.download = "text.txt";
+    element.click();
+};
+let aaa = "aadadanrrrrrrrrrrrrrrrrrr"
+export default saveToFile;
 
 const Sample = () => {
     const [C1_, C1__] = useState('#FFF'), [D1_, D1__] = useState('#FFF'), [E1_, E1__] = useState('#FFF'), [F1_, F1__] = useState('#FFF'), [G1_, G1__] = useState('#FFF'), [A1_, A1__] = useState('#FFF'), [B1_, B1__] = useState('#FFF')
@@ -18,6 +26,7 @@ const Sample = () => {
     let piano_count = 2;
 
     const handleKeyDown = (event: KeyboardEvent) => {
+
         let soundfile = [C1, D1, E1, F1, G1, A1, B1, C2, D2, E2, F2, G2, A2, B2, C3, D3, E3, F3, G3, A3, B3, C4, D4, E4, F4, G4, A4, B4, C5, D5, E5, F5, G5, A5, B5, C6, D6, E6, F6, G6, A6, B6, C7, D7, E7, F7, G7, A7, B7, C8, Db1, Eb1, Gb1, Ab1, Bb1, Db2, Eb2, Gb2, Ab2, Bb2, Db3, Eb3, Gb3, Ab3, Bb3, Db4, Eb4, Gb4, Ab4, Bb4, Db5, Eb5, Gb5, Ab5, Bb5, Db6, Eb6, Gb6, Ab6, Bb6, Db7, Eb7, Gb7, Ab7, Bb7]
         if (event.keyCode === 39 && piano_count < 4) {
             piano_count += 1;
@@ -201,6 +210,7 @@ export const Main = () => {
     return (
         <Box className="Main" sx={sx}>
             <Sample></Sample>
+            {/* <Button onClick={() => saveToFile(aaa)}>Save File</Button> */}
         </Box>
     );
 };
