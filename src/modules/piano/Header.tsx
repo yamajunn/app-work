@@ -1,11 +1,16 @@
-import { styled, alpha } from '@mui/material/styles';
+import { styled, alpha, SxProps, Theme, Typography } from '@mui/material/';
+import { IconContext } from 'react-icons'
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
-import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
+import { FaAngleDoubleLeft } from "react-icons/fa";
+import { FaPlay } from "react-icons/fa";
+import { FaAngleDoubleRight } from "react-icons/fa";
+import { TbFileImport } from "react-icons/tb";
+import { FaDownload } from "react-icons/fa";
+
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -30,13 +35,13 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    color: "white",
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
-    color: 'inherit',
+    color: "white",
     '& .MuiInputBase-input': {
         padding: theme.spacing(1, 1, 1, 0),
-        // vertical padding + font size from searchIcon
         paddingLeft: `calc(1em + ${theme.spacing(4)})`,
         transition: theme.transitions.create('width'),
         width: '100%',
@@ -51,10 +56,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export const Header = () => {
     return (
-        <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static" color="primary">
+        <Box className="Header" sx={sx}>
+            <AppBar position="static" color="transparent">
                 <Toolbar>
-                    <Typography variant='h5' sx={{ width: "5%" }}>検索</Typography>
                     <Search>
                         <SearchIconWrapper>
                             <SearchIcon />
@@ -64,8 +68,36 @@ export const Header = () => {
                             inputProps={{ 'aria-label': 'search' }}
                         />
                     </Search>
+                    <Box className="Buttons" >
+                        <IconContext.Provider value={{ color: '#FFF', size: '30px' }}>
+                            <FaAngleDoubleLeft />
+                            <FaPlay />
+                            <FaAngleDoubleRight />
+                            {/* <TbFileImport />
+                            <FaDownload /> */}
+                        </IconContext.Provider>
+                        <Box className="RightBox">
+                            <Typography variant='h5'>投稿</Typography>
+                            <Typography variant='h5'>ログイン</Typography>
+                        </Box>
+                    </Box>
                 </Toolbar>
             </AppBar>
         </Box>
     );
 }
+const sx: SxProps<Theme> = {
+    "&.Header": {
+        width: "100%",
+        backgroundColor: "#303030",
+    },
+    ".Buttons": {
+        color: "#FFF",
+        marginLeft: "35%",
+        display: "flex",
+    },
+    ".RightBox": {
+        display: "flex",
+    }
+};
+
