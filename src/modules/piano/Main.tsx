@@ -141,16 +141,15 @@ const Sample = () => {
             time = Date.now()
             start = true
         }
-
-        const saveToFile = (recordList) => {
-            const element = document.createElement('a');
-            const file = new Blob([recordList], { type: 'text/plain' });
-            element.href = URL.createObjectURL(file);
-            element.download = "text.txt";
-            element.click();
-        };
+        saveToFile(recordList)
     }
-
+    function saveToFile(content) {
+        const element = document.createElement('a');
+        const file = new Blob([content], { type: 'text/plain' });
+        element.href = URL.createObjectURL(file);
+        element.download = "text.txt";
+        element.click();
+    };
     useEffect(() => {
         document.addEventListener('keydown', handleKeyDown, false)
     }, [])
