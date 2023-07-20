@@ -103,7 +103,7 @@ const sx: SxProps<Theme> = {
     },
     ".Buttons": {
         color: "#FFF",
-        marginLeft: "35%",
+        marginLeft: "30%",
         display: "flex",
     },
     ".button": {
@@ -113,14 +113,17 @@ const sx: SxProps<Theme> = {
     ".RightBox": {
         color: "#99999999",
         display: "flex",
-        margin: "0 0 0 300px",
+        margin: "0 0 0 370px",
     },
     ".toukou": {
         color: "#99999999",
-        marginRight: "30px",
+        marginRight: "15px",
+        marginLeft: "15px",
     },
     ".loggin": {
         color: "#99999999",
+        marginRight: "15px",
+        marginLeft: "15px",
     }
 };
 
