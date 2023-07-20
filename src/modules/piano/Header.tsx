@@ -1,4 +1,4 @@
-import { styled, alpha, SxProps, Theme, Typography } from '@mui/material/';
+import { styled, alpha, SxProps, Theme, Typography, Button } from '@mui/material/';
 import { IconContext } from 'react-icons'
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -70,16 +70,26 @@ export const Header = () => {
                     </Search>
                     <Box className="Buttons" >
                         <IconContext.Provider value={{ color: '#FFF', size: '30px' }}>
-                            <FaAngleDoubleLeft />
-                            <FaPlay />
-                            <FaAngleDoubleRight />
+                            <Button>
+                                <FaAngleDoubleLeft className="button" />
+                            </Button>
+                            <Button>
+                                <FaPlay className="button" />
+                            </Button>
+                            <Button>
+                                <FaAngleDoubleRight className="button" />
+                            </Button>
                             {/* <TbFileImport />
                             <FaDownload /> */}
                         </IconContext.Provider>
-                        <Box className="RightBox">
-                            <Typography variant='h5'>投稿</Typography>
-                            <Typography variant='h5'>ログイン</Typography>
-                        </Box>
+                    </Box>
+                    <Box className="RightBox">
+                        <Button>
+                            <Typography className="toukou" variant='h5'>投稿</Typography>
+                        </Button>
+                        <Button>
+                            <Typography className="loggin" variant='h5'>ログイン</Typography>
+                        </Button>
                     </Box>
                 </Toolbar>
             </AppBar>
@@ -96,8 +106,21 @@ const sx: SxProps<Theme> = {
         marginLeft: "35%",
         display: "flex",
     },
+    ".button": {
+        marginRight: "5px",
+        marginLeft: "5px",
+    },
     ".RightBox": {
+        color: "#99999999",
         display: "flex",
+        margin: "0 0 0 300px",
+    },
+    ".toukou": {
+        color: "#99999999",
+        marginRight: "30px",
+    },
+    ".loggin": {
+        color: "#99999999",
     }
 };
 
