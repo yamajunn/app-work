@@ -1,9 +1,16 @@
-import { styled, alpha, SxProps, Theme } from '@mui/material/styles';
+import { styled, alpha, SxProps, Theme, Typography, Button } from '@mui/material/';
+import { IconContext } from 'react-icons'
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
+import { FaAngleDoubleLeft } from "react-icons/fa";
+import { FaPlay } from "react-icons/fa";
+import { FaAngleDoubleRight } from "react-icons/fa";
+import { TbFileImport } from "react-icons/tb";
+import { FaDownload } from "react-icons/fa";
+
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -35,7 +42,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     color: "white",
     '& .MuiInputBase-input': {
         padding: theme.spacing(1, 1, 1, 0),
-        // vertical padding + font size from searchIcon
         paddingLeft: `calc(1em + ${theme.spacing(4)})`,
         transition: theme.transitions.create('width'),
         width: '100%',
@@ -62,6 +68,29 @@ export const Header = () => {
                             inputProps={{ 'aria-label': 'search' }}
                         />
                     </Search>
+                    <Box className="Buttons" >
+                        <IconContext.Provider value={{ color: '#FFF', size: '30px' }}>
+                            <Button>
+                                <FaAngleDoubleLeft className="button" />
+                            </Button>
+                            <Button>
+                                <FaPlay className="button" />
+                            </Button>
+                            <Button>
+                                <FaAngleDoubleRight className="button" />
+                            </Button>
+                            {/* <TbFileImport />
+                            <FaDownload /> */}
+                        </IconContext.Provider>
+                    </Box>
+                    <Box className="RightBox">
+                        <Button>
+                            <Typography className="toukou" variant='h5'>投稿</Typography>
+                        </Button>
+                        <Button>
+                            <Typography className="loggin" variant='h5'>ログイン</Typography>
+                        </Button>
+                    </Box>
                 </Toolbar>
             </AppBar>
         </Box>
@@ -71,6 +100,30 @@ const sx: SxProps<Theme> = {
     "&.Header": {
         width: "100%",
         backgroundColor: "#303030",
+    },
+    ".Buttons": {
+        color: "#FFF",
+        marginLeft: "30%",
+        display: "flex",
+    },
+    ".button": {
+        marginRight: "5px",
+        marginLeft: "5px",
+    },
+    ".RightBox": {
+        color: "#99999999",
+        display: "flex",
+        margin: "0 0 0 370px",
+    },
+    ".toukou": {
+        color: "#99999999",
+        marginRight: "15px",
+        marginLeft: "15px",
+    },
+    ".loggin": {
+        color: "#99999999",
+        marginRight: "15px",
+        marginLeft: "15px",
     }
 };
 

@@ -1,7 +1,10 @@
-import { Box, Button, ListClassKey, SxProps, Theme, Typography } from "@mui/material";
-import React, { useEffect, useCallback, SetStateAction } from "react";
+import { Box, Button, SxProps, Theme, Typography } from "@mui/material";
+import { useEffect, useCallback } from "react";
 import { useState } from 'react';
 import { C1, D1, E1, F1, G1, A1, B1, C2, D2, E2, F2, G2, A2, B2, C3, D3, E3, F3, G3, A3, B3, C4, D4, E4, F4, G4, A4, B4, C5, D5, E5, F5, G5, A5, B5, C6, D6, E6, F6, G6, A6, B6, C7, D7, E7, F7, G7, A7, B7, C8, Db1, Eb1, Gb1, Ab1, Bb1, Db2, Eb2, Gb2, Ab2, Bb2, Db3, Eb3, Gb3, Ab3, Bb3, Db4, Eb4, Gb4, Ab4, Bb4, Db5, Eb5, Gb5, Ab5, Bb5, Db6, Eb6, Gb6, Ab6, Bb6, Db7, Eb7, Gb7, Ab7, Bb7, } from "../../resources/piano/";
+import file from "../../resources/SongFile/test1.json";
+
+let list = [0, 1, 2, 3, 4, 5]
 
 const Sample = () => {
     const [C1_, C1__] = useState('#FFF'), [D1_, D1__] = useState('#FFF'), [E1_, E1__] = useState('#FFF'), [F1_, F1__] = useState('#FFF'), [G1_, G1__] = useState('#FFF'), [A1_, A1__] = useState('#FFF'), [B1_, B1__] = useState('#FFF')
@@ -137,7 +140,7 @@ const Sample = () => {
         if (event.key === '/') {
             let sound = new Audio(soundfile[21 + piano_count * 7]); sound.play(); C4__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, soundfile[21 + piano_count * 7]]) }
         }
-        if (event.key === ' ') {
+        if (event.key === "space") {
             time = Date.now()
             start = true
         }
@@ -157,6 +160,7 @@ const Sample = () => {
     }, [C1_, D1_, E1_, F1_, G1_, A1_, B1_, C2_, D2_, E2_, F2_, G2_, A2_, B2_, C3_, D3_, E3_, F3_, G3_, A3_, B3_, C4_, Db1_, Eb1_, Gb1_, Ab1_, Bb1_, Db2_, Eb2_, Gb2_, Ab2_, Bb2_, Db3_, Eb3_, Gb3_, Ab3_, Bb3_]);
     return (
         <Box className="Piano">
+            {list}
             <Box className="Piano-white">
                 <Button className="C1" variant="contained" sx={{ backgroundColor: C1_, border: "1px solid #000", "&:hover": { opacity: 1 } }} color="error"></Button>
                 <Button className="D1" variant="contained" sx={{ backgroundColor: D1_, border: "1px solid #000", "&:hover": { opacity: 1 } }} color="error"></Button>
@@ -202,18 +206,18 @@ const Sample = () => {
     );
 }
 
-function saveToFile(content: any) {
+function saveToFile(recordList: any) {
     const element = document.createElement('a');
-    const file = new Blob([content], { type: 'text/plain' });
+    const file = new Blob([recordList], { type: 'text/plain' });
     element.href = URL.createObjectURL(file);
-    element.download = "text.txt";
+    element.download = "record.json";
     element.click();
 };
 
-export const Main = () => {
+export const Main = (recordList: any) => {
     return (
         <Box className="Main" sx={sx}>
-            <Button className="Button" onClick={saveToFile}><Typography className="ButtonText" variant="h4">保存</Typography></Button>
+            {/* <Button className="Button" onClick={saveToFile()}><Typography className="ButtonText" variant="h4">保存</Typography></Button> */}
             <Sample></Sample>
         </Box>
     );
