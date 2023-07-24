@@ -28,10 +28,21 @@ const Sample = () => {
     let piano_count = 2;
     let start = Boolean(false);
     let time = 0;
-    let recordList: number[];
+    let recordList: any[] = [];
+
+    function colorChange(num: number) {
+        if (num === 0) { C1__("#990000") }; if (num === 1) { D1__("#990000") }; if (num === 2) { E1__("#990000") }; if (num === 3) { F1__("#990000") }; if (num === 4) { G1__("#990000") }; if (num === 5) { A1__("#990000") }; if (num === 6) { B1__("#990000") };
+        if (num === 7) { C2__("#990000") }; if (num === 8) { D2__("#990000") }; if (num === 9) { E2__("#990000") }; if (num === 10) { F2__("#990000") }; if (num === 11) { G2__("#990000") }; if (num === 12) { A2__("#990000") }; if (num === 13) { B2__("#990000") };
+        if (num === 14) { C3__("#990000") }; if (num === 15) { D3__("#990000") }; if (num === 16) { E3__("#990000") }; if (num === 17) { F3__("#990000") }; if (num === 18) { G3__("#990000") }; if (num === 19) { A3__("#990000") }; if (num === 20) { B3__("#990000") };
+        if (num === 21) { C4__("#990000") };
+        if (num === 22) { Db1__("#990000") }; if (num === 23) { Eb1__("#990000") }; if (num === 24) { Gb1__("#990000") }; if (num === 25) { Ab1__("#990000") }; if (num === 26) { Bb1__("#990000") };
+        if (num === 27) { Db2__("#990000") }; if (num === 28) { Eb2__("#990000") }; if (num === 29) { Gb2__("#990000") }; if (num === 30) { Ab2__("#990000") }; if (num === 31) { Bb2__("#990000") };
+        if (num === 32) { Db3__("#990000") }; if (num === 33) { Eb3__("#990000") }; if (num === 34) { Gb3__("#990000") }; if (num === 35) { Ab3__("#990000") }; if (num === 36) { Bb3__("#990000") };
+        resetColor();
+    }
 
 
-    function handleKeyDown(event: KeyboardEvent) {
+    function handleKeyDown(event: any, recordList: any[]) {
         let soundfile = [C1, D1, E1, F1, G1, A1, B1, C2, D2, E2, F2, G2, A2, B2, C3, D3, E3, F3, G3, A3, B3, C4, D4, E4, F4, G4, A4, B4, C5, D5, E5, F5, G5, A5, B5, C6, D6, E6, F6, G6, A6, B6, C7, D7, E7, F7, G7, A7, B7, C8, Db1, Eb1, Gb1, Ab1, Bb1, Db2, Eb2, Gb2, Ab2, Bb2, Db3, Eb3, Gb3, Ab3, Bb3, Db4, Eb4, Gb4, Ab4, Bb4, Db5, Eb5, Gb5, Ab5, Bb5, Db6, Eb6, Gb6, Ab6, Bb6, Db7, Eb7, Gb7, Ab7, Bb7]
 
         if (event.keyCode === 39 && piano_count < 4) {
@@ -41,7 +52,7 @@ const Sample = () => {
             piano_count -= 1;
         }
         if (event.key === 'q') {
-            let sound = new Audio(soundfile[0 + piano_count * 7]); sound.play(); C1__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 0 + piano_count * 7) }
+            let sound = new Audio(soundfile[0 + piano_count * 7]); sound.play(); C1__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 50 + piano_count * 5]) }
         }
         if (event.key === '2') {
             let sound = new Audio(soundfile[50 + piano_count * 5]); sound.play(); Db1__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 50 + piano_count * 5) }
@@ -153,18 +164,11 @@ const Sample = () => {
         }
         if (event.key === ":") {
             for (let item of file) {
-                if (item[1] <= 49) {
-                    piano_count = Math.floor(item[1] / 21)
-                    // piano_count = 0
-                    console.log(Math.floor(item[1] / 21))
-                    setTimeout(() => document.dispatchEvent(KeyList[item[1] - (Math.floor(item[1] / 21) * 21)]), item[0]);
-                }
-                else {
-                    // piano_count = Number(((item[1] - 49) - (item[1] % 5)) / 5)
-                    // piano_count = 2
-                    // setTimeout(() => document.dispatchEvent(KeyList[item[1] - ((Math.floor(item[1] / 21)) * 21)]), item[0]);
-                }
-                // document.dispatchEvent(KeyQ);
+                let sound = new Audio(soundfile[item[1]]);
+                setTimeout(() => {
+                    colorChange(item[1] - Math.floor(item[1] / 21) * 21)
+                    sound.play()
+                }, item[0]);
             }
         }
         if (event.key === "_") {
@@ -179,14 +183,16 @@ const Sample = () => {
 
             link.href = URL.createObjectURL(blob);
 
-            link.download = "../../resources/SongFile/test2.json";
+            link.download = "test2.json";
 
             link.click();
         }
     }
     useEffect(() => {
-        document.addEventListener('keydown', handleKeyDown, false)
-    }, [])
+        document.addEventListener("keydown", (event) => {
+            handleKeyDown(event, recordList);
+        }, false);
+    }, []);
 
     const resetColor = useCallback(() => {
         setTimeout(() => {
