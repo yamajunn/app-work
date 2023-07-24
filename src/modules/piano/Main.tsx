@@ -26,9 +26,9 @@ const Sample = () => {
 
 
     let piano_count = 2;
-    let start = Boolean(false)
-    let time = 0
-    var recordList: any[]
+    let start = Boolean(false);
+    let time = 0;
+    let recordList: number[];
 
 
     function handleKeyDown(event: KeyboardEvent) {
@@ -41,126 +41,128 @@ const Sample = () => {
             piano_count -= 1;
         }
         if (event.key === 'q') {
-            let sound = new Audio(soundfile[0 + piano_count * 7]); sound.play(); C1__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 0 + piano_count * 7]) }
+            let sound = new Audio(soundfile[0 + piano_count * 7]); sound.play(); C1__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 0 + piano_count * 7) }
         }
         if (event.key === '2') {
-            let sound = new Audio(soundfile[50 + piano_count * 5]); sound.play(); Db1__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 50 + piano_count * 5]) }
+            let sound = new Audio(soundfile[50 + piano_count * 5]); sound.play(); Db1__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 50 + piano_count * 5) }
         }
         if (event.key === 'w') {
-            let sound = new Audio(soundfile[1 + piano_count * 7]); sound.play(); D1__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 1 + piano_count * 7]) }
+            let sound = new Audio(soundfile[1 + piano_count * 7]); sound.play(); D1__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 1 + piano_count * 7) }
         }
         if (event.key === '3') {
-            let sound = new Audio(soundfile[51 + piano_count * 5]); sound.play(); Eb1__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 51 + piano_count * 5]) }
+            let sound = new Audio(soundfile[51 + piano_count * 5]); sound.play(); Eb1__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 51 + piano_count * 5) }
         }
         if (event.key === 'e') {
-            let sound = new Audio(soundfile[2 + piano_count * 7]); sound.play(); E1__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 2 + piano_count * 7]) }
+            let sound = new Audio(soundfile[2 + piano_count * 7]); sound.play(); E1__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 2 + piano_count * 7) }
         }
         if (event.key === 'r') {
-            let sound = new Audio(soundfile[3 + piano_count * 7]); sound.play(); F1__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 3 + piano_count * 7]) }
+            let sound = new Audio(soundfile[3 + piano_count * 7]); sound.play(); F1__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 3 + piano_count * 7) }
         }
         if (event.key === '5') {
-            let sound = new Audio(soundfile[52 + piano_count * 5]); sound.play(); Gb1__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 52 + piano_count * 5]) }
+            let sound = new Audio(soundfile[52 + piano_count * 5]); sound.play(); Gb1__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 52 + piano_count * 5) }
         }
         if (event.key === 't') {
-            let sound = new Audio(soundfile[4 + piano_count * 7]); sound.play(); G1__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 4 + piano_count * 7]) }
+            let sound = new Audio(soundfile[4 + piano_count * 7]); sound.play(); G1__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 4 + piano_count * 7) }
         }
         if (event.key === '6') {
-            let sound = new Audio(soundfile[53 + piano_count * 5]); sound.play(); Ab1__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 53 + piano_count * 5]) }
+            let sound = new Audio(soundfile[53 + piano_count * 5]); sound.play(); Ab1__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 53 + piano_count * 5) }
         }
         if (event.key === 'y') {
-            let sound = new Audio(soundfile[5 + piano_count * 7]); sound.play(); A1__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 5 + piano_count * 7]) }
+            let sound = new Audio(soundfile[5 + piano_count * 7]); sound.play(); A1__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 5 + piano_count * 7) }
         }
         if (event.key === '7') {
-            let sound = new Audio(soundfile[54 + piano_count * 5]); sound.play(); Bb1__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 54 + piano_count * 5]) }
+            let sound = new Audio(soundfile[54 + piano_count * 5]); sound.play(); Bb1__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 54 + piano_count * 5) }
         }
         if (event.key === 'u') {
-            let sound = new Audio(soundfile[6 + piano_count * 7]); sound.play(); B1__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 6 + piano_count * 7]) }
+            let sound = new Audio(soundfile[6 + piano_count * 7]); sound.play(); B1__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 6 + piano_count * 7) }
         }
         if (event.key === 'i') {
-            let sound = new Audio(soundfile[7 + piano_count * 7]); sound.play(); C2__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 7 + piano_count * 7]) }
+            let sound = new Audio(soundfile[7 + piano_count * 7]); sound.play(); C2__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 7 + piano_count * 7) }
         }
         if (event.key === '9') {
-            let sound = new Audio(soundfile[55 + piano_count * 5]); sound.play(); Db2__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 55 + piano_count * 5]) }
+            let sound = new Audio(soundfile[55 + piano_count * 5]); sound.play(); Db2__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 55 + piano_count * 5) }
         }
         if (event.key === 'o') {
-            let sound = new Audio(soundfile[8 + piano_count * 7]); sound.play(); D2__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 8 + piano_count * 7]) }
+            let sound = new Audio(soundfile[8 + piano_count * 7]); sound.play(); D2__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 8 + piano_count * 7) }
         }
         if (event.key === '0') {
-            let sound = new Audio(soundfile[56 + piano_count * 5]); sound.play(); Eb2__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 56 + piano_count * 5]) }
+            let sound = new Audio(soundfile[56 + piano_count * 5]); sound.play(); Eb2__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 56 + piano_count * 5) }
         }
         if (event.key === 'p') {
-            let sound = new Audio(soundfile[9 + piano_count * 7]); sound.play(); E2__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 9 + piano_count * 7]) }
+            let sound = new Audio(soundfile[9 + piano_count * 7]); sound.play(); E2__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 9 + piano_count * 7) }
         }
         if (event.key === '@') {
-            let sound = new Audio(soundfile[10 + piano_count * 7]); sound.play(); F2__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 10 + piano_count * 7]) }
+            let sound = new Audio(soundfile[10 + piano_count * 7]); sound.play(); F2__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 10 + piano_count * 7) }
         }
         if (event.key === '^') {
-            let sound = new Audio(soundfile[57 + piano_count * 5]); sound.play(); Gb2__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 57 + piano_count * 5]) }
+            let sound = new Audio(soundfile[57 + piano_count * 5]); sound.play(); Gb2__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 57 + piano_count * 5) }
         }
         if (event.key === '[') {
-            let sound = new Audio(soundfile[11 + piano_count * 7]); sound.play(); G2__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 11 + piano_count * 7]) }
+            let sound = new Audio(soundfile[11 + piano_count * 7]); sound.play(); G2__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 11 + piano_count * 7) }
         }
         if (event.key === '¥') {
-            let sound = new Audio(soundfile[58 + piano_count * 5]); sound.play(); Ab2__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 58 + piano_count * 5]) }
+            let sound = new Audio(soundfile[58 + piano_count * 5]); sound.play(); Ab2__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 58 + piano_count * 5) }
         }
         if (event.key === 'z') {
-            let sound = new Audio(soundfile[12 + piano_count * 7]); sound.play(); A2__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 12 + piano_count * 7]) }
+            let sound = new Audio(soundfile[12 + piano_count * 7]); sound.play(); A2__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 12 + piano_count * 7) }
         }
         if (event.key === 's') {
-            let sound = new Audio(soundfile[59 + piano_count * 5]); sound.play(); Bb2__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 59 + piano_count * 5]) }
+            let sound = new Audio(soundfile[59 + piano_count * 5]); sound.play(); Bb2__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 59 + piano_count * 5) }
         }
         if (event.key === 'x') {
-            let sound = new Audio(soundfile[13 + piano_count * 7]); sound.play(); B2__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 13 + piano_count * 7]) }
+            let sound = new Audio(soundfile[13 + piano_count * 7]); sound.play(); B2__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 13 + piano_count * 7) }
         }
         if (event.key === 'c') {
-            let sound = new Audio(soundfile[14 + piano_count * 7]); sound.play(); C3__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 14 + piano_count * 7]) }
+            let sound = new Audio(soundfile[14 + piano_count * 7]); sound.play(); C3__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 14 + piano_count * 7) }
         }
         if (event.key === 'f') {
-            let sound = new Audio(soundfile[60 + piano_count * 5]); sound.play(); Db3__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 60 + piano_count * 5]) }
+            let sound = new Audio(soundfile[60 + piano_count * 5]); sound.play(); Db3__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 60 + piano_count * 5) }
         }
         if (event.key === 'v') {
-            let sound = new Audio(soundfile[15 + piano_count * 7]); sound.play(); D3__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 15 + piano_count * 7]) }
+            let sound = new Audio(soundfile[15 + piano_count * 7]); sound.play(); D3__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 15 + piano_count * 7) }
         }
         if (event.key === 'g') {
-            let sound = new Audio(soundfile[61 + piano_count * 5]); sound.play(); Eb3__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 61 + piano_count * 5]) }
+            let sound = new Audio(soundfile[61 + piano_count * 5]); sound.play(); Eb3__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 61 + piano_count * 5) }
         }
         if (event.key === 'b') {
-            let sound = new Audio(soundfile[16 + piano_count * 7]); sound.play(); E3__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 16 + piano_count * 7]) }
+            let sound = new Audio(soundfile[16 + piano_count * 7]); sound.play(); E3__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 16 + piano_count * 7) }
         }
         if (event.key === 'n') {
-            let sound = new Audio(soundfile[17 + piano_count * 7]); sound.play(); F3__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 17 + piano_count * 7]) }
+            let sound = new Audio(soundfile[17 + piano_count * 7]); sound.play(); F3__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 17 + piano_count * 7) }
         }
         if (event.key === 'j') {
-            let sound = new Audio(soundfile[62 + piano_count * 5]); sound.play(); Gb3__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 62 + piano_count * 5]) }
+            let sound = new Audio(soundfile[62 + piano_count * 5]); sound.play(); Gb3__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 62 + piano_count * 5) }
         }
         if (event.key === 'm') {
-            let sound = new Audio(soundfile[18 + piano_count * 7]); sound.play(); G3__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 18 + piano_count * 7]) }
+            let sound = new Audio(soundfile[18 + piano_count * 7]); sound.play(); G3__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 18 + piano_count * 7) }
         }
         if (event.key === 'k') {
-            let sound = new Audio(soundfile[63 + piano_count * 5]); sound.play(); Ab3__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 63 + piano_count * 5]) }
+            let sound = new Audio(soundfile[63 + piano_count * 5]); sound.play(); Ab3__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 63 + piano_count * 5) }
         }
         if (event.key === ',') {
-            let sound = new Audio(soundfile[19 + piano_count * 7]); sound.play(); A3__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 19 + piano_count * 7]) }
+            let sound = new Audio(soundfile[19 + piano_count * 7]); sound.play(); A3__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 19 + piano_count * 7) }
         }
         if (event.key === 'l') {
-            let sound = new Audio(soundfile[64 + piano_count * 5]); sound.play(); Bb3__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 64 + piano_count * 5]) }
+            let sound = new Audio(soundfile[64 + piano_count * 5]); sound.play(); Bb3__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 64 + piano_count * 5) }
         }
         if (event.key === '.') {
-            let sound = new Audio(soundfile[20 + piano_count * 7]); sound.play(); B3__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 20 + piano_count * 7]) }
+            let sound = new Audio(soundfile[20 + piano_count * 7]); sound.play(); B3__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 20 + piano_count * 7) }
         }
         if (event.key === '/') {
-            let sound = new Audio(soundfile[21 + piano_count * 7]); sound.play(); C4__("#990000"); resetColor(); if (start) { recordList.push([Date.now() - time, 21 + piano_count * 7]) }
+            let sound = new Audio(soundfile[21 + piano_count * 7]); sound.play(); C4__("#990000"); resetColor(); if (start) { recordList.push(Date.now() - time, 21 + piano_count * 7) }
         }
         if (event.key === ":") {
             for (let item of file) {
                 if (item[1] <= 49) {
-                    piano_count = Math.floor(item[1] / 21) * 3
-                    setTimeout(() => document.dispatchEvent(KeyList[item[1] - ((Math.floor(item[1] / 21)) * 21)]), item[0]);
+                    piano_count = Math.floor(item[1] / 21)
+                    // piano_count = 0
+                    console.log(Math.floor(item[1] / 21))
+                    setTimeout(() => document.dispatchEvent(KeyList[item[1] - (Math.floor(item[1] / 21) * 21)]), item[0]);
                 }
                 else {
                     // piano_count = Number(((item[1] - 49) - (item[1] % 5)) / 5)
-                    piano_count = 2
-                    setTimeout(() => document.dispatchEvent(KeyList[item[1] - ((Math.floor(item[1] / 21)) * 21)]), item[0]);
+                    // piano_count = 2
+                    // setTimeout(() => document.dispatchEvent(KeyList[item[1] - ((Math.floor(item[1] / 21)) * 21)]), item[0]);
                 }
                 // document.dispatchEvent(KeyQ);
             }
@@ -195,6 +197,7 @@ const Sample = () => {
     }, [C1_, D1_, E1_, F1_, G1_, A1_, B1_, C2_, D2_, E2_, F2_, G2_, A2_, B2_, C3_, D3_, E3_, F3_, G3_, A3_, B3_, C4_, Db1_, Eb1_, Gb1_, Ab1_, Bb1_, Db2_, Eb2_, Gb2_, Ab2_, Bb2_, Db3_, Eb3_, Gb3_, Ab3_, Bb3_]);
     return (
         <Box className="Piano">
+            {Math.floor(10 / 21)}
             <Box className="Piano-white">
                 <Button className="C1" variant="contained" sx={{ backgroundColor: C1_, border: "1px solid #000", "&:hover": { opacity: 1 } }} color="error"></Button>
                 <Button className="D1" variant="contained" sx={{ backgroundColor: D1_, border: "1px solid #000", "&:hover": { opacity: 1 } }} color="error"></Button>
