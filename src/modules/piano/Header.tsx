@@ -84,11 +84,11 @@ export const Header = () => {
                         </IconContext.Provider>
                     </Box>
                     <Box className="RightBox">
-                        <Button>
+                        <Button href='/post'>
                             <Typography className="toukou" variant='h5'>投稿</Typography>
                         </Button>
-                        <Button>
-                            <Typography className="loggin" variant='h5'>ログイン</Typography>
+                        <Button href='/login'>
+                            <Typography className="login" variant='h5'>ログイン</Typography>
                         </Button>
                     </Box>
                 </Toolbar>
@@ -116,12 +116,12 @@ const sx: SxProps<Theme> = {
         margin: "0 0 0 370px",
     },
     ".toukou": {
-        color: "#99999999",
+        color: "#999",
         marginRight: "15px",
         marginLeft: "15px",
     },
-    ".loggin": {
-        color: "#99999999",
+    ".login": {
+        color: "#999",
         marginRight: "15px",
         marginLeft: "15px",
     }
