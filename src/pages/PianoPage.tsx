@@ -19,5 +19,7 @@ export const PianoPage = () => {
 const sx: SxProps<Theme> = {
     "&.PianoPage": {
         width: "100%",
+        height: "100vh",
+        backgroundColor: "#808080",
     }
 };

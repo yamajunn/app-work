@@ -18,6 +18,7 @@ export const App = () => {
         <Route path="/sample" element={<SamplePage />} />
         {/* ピアノページ */}
         <Route path="/piano" element={<PianoPage />} />
+        {/* 新規作成ページ */}
       </Routes>
     </Box>
   );
