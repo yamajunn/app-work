@@ -1,15 +1,10 @@
 import { styled, alpha, SxProps, Theme, Typography, Button } from '@mui/material/';
-import { IconContext } from 'react-icons'
+
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
-import { FaAngleDoubleLeft } from "react-icons/fa";
-import { FaPlay } from "react-icons/fa";
-import { FaAngleDoubleRight } from "react-icons/fa";
-import { TbFileImport } from "react-icons/tb";
-import { FaDownload } from "react-icons/fa";
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -68,27 +63,9 @@ export const Header = () => {
                             inputProps={{ 'aria-label': 'search' }}
                         />
                     </Search>
-                    <Box className="Buttons" >
-                        <IconContext.Provider value={{ color: '#FFF', size: '30px' }}>
-                            <Button>
-                                <FaAngleDoubleLeft className="button" />
-                            </Button>
-                            <Button>
-                                <FaPlay className="button" />
-                            </Button>
-                            <Button>
-                                <FaAngleDoubleRight className="button" />
-                            </Button>
-                            {/* <TbFileImport />
-                            <FaDownload /> */}
-                        </IconContext.Provider>
-                    </Box>
                     <Box className="RightBox">
-                        <Button href='/post'>
-                            <Typography className="toukou" variant='h5'>投稿</Typography>
-                        </Button>
-                        <Button href='/login'>
-                            <Typography className="login" variant='h5'>ログイン</Typography>
+                        <Button href='/piano'>
+                            <Typography className="modoru" variant='h5'>戻る</Typography>
                         </Button>
                     </Box>
                 </Toolbar>
@@ -101,29 +78,12 @@ const sx: SxProps<Theme> = {
         width: "100%",
         backgroundColor: "#303030",
     },
-    ".Buttons": {
-        color: "#FFF",
-        marginLeft: "30%",
-        display: "flex",
-    },
-    ".button": {
-        marginRight: "5px",
-        marginLeft: "5px",
-    },
     ".RightBox": {
-        color: "#99999999",
         display: "flex",
-        margin: "0 0 0 370px",
+        marginLeft: "1100px",
     },
-    ".toukou": {
+    ".modoru": {
         color: "#999",
-        marginRight: "15px",
-        marginLeft: "15px",
-    },
-    ".login": {
-        color: "#999",
-        marginRight: "15px",
-        marginLeft: "15px",
     }
 };
 
