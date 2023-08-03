@@ -1,4 +1,5 @@
 import { Box, SxProps, Theme, Typography, TextField, Button } from "@mui/material";
+import { isWhiteSpaceLike } from "typescript";
 
 export const Main = () => {
     return (
@@ -13,6 +14,10 @@ export const Main = () => {
                 </Box>
                 <Button className="LoginButton">
                     <Typography variant="h5">Login</Typography>
+                </Button>
+                <Box></Box>
+                <Button className="CreateButton">
+                    <Typography variant="h5">Create Account</Typography>
                 </Button>
             </Box>
         </Box>
@@ -44,7 +49,9 @@ const sx: SxProps<Theme> = {
         backgroundColor: "#FFF",
     },
     ".LoginButton": {
-
+        color: "#000"
+    },
+    ".CreateButton": {
         color: "#000"
     },
 };
