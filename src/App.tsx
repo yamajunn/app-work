@@ -6,6 +6,7 @@ import { Route, Routes } from "react-router-dom";
 import { TopPage } from "./pages/TopPage";
 import { SamplePage } from "./pages/SamplePage";
 import { PianoPage } from "./pages/PianoPage";
+import { LoginPage } from "./pages/LoginPage";
 
 // Appのメインの実装（表示する画面とpathを定義）
 export const App = () => {
@@ -18,6 +19,8 @@ export const App = () => {
         <Route path="/sample" element={<SamplePage />} />
         {/* ピアノページ */}
         <Route path="/piano" element={<PianoPage />} />
+        {/* ログインページ */}
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </Box>
   );
