@@ -7,11 +7,13 @@ export const Main = () => {
                 <Typography className="LoginText" variant="h3">Login</Typography>
                 <Box className="TextBox">
                     <Typography>メールアドレス</Typography>
-                    <TextField></TextField>
+                    <TextField className="Text" ></TextField>
                     <Typography>パスワード</Typography>
-                    <TextField></TextField>
+                    <TextField className="Text"></TextField>
                 </Box>
-                <Button className="LoginButton">Login</Button>
+                <Button className="LoginButton">
+                    <Typography variant="h5">Login</Typography>
+                </Button>
             </Box>
         </Box>
     );
@@ -27,13 +29,22 @@ const sx: SxProps<Theme> = {
         height: "600px",
         margin: "50px auto",
         backgroundColor: "#999999",
+        textAlign: "center",
     },
     ".LoginText": {
         textAlign: "center",
-        margin: "20px",
-        color: "#FFF",
+        margin: "0 0 100px",
+
     },
     ".TextBox": {
         textAlign: "center",
-    }
+        margin: "0 0 100px",
+    },
+    ".Text": {
+        backgroundColor: "#FFF",
+    },
+    ".LoginButton": {
+
+        color: "#000"
+    },
 };
