@@ -12,11 +12,11 @@ export const Main = () => {
                     <Typography>パスワード</Typography>
                     <TextField className="Text"></TextField>
                 </Box>
-                <Button className="LoginButton">
+                <Button className="LoginButton" href="/piano">
                     <Typography variant="h5">Login</Typography>
                 </Button>
                 <Box></Box>
-                <Button className="CreateButton">
+                <Button className="CreateButton" href="/create">
                     <Typography variant="h5">Create Account</Typography>
                 </Button>
             </Box>
