@@ -7,6 +7,7 @@ import { TopPage } from "./pages/TopPage";
 import { SamplePage } from "./pages/SamplePage";
 import { PianoPage } from "./pages/PianoPage";
 import { LoginPage } from "./pages/LoginPage";
+import { CreateAccountPage } from "./pages/CreateAccountPage";
 
 // Appのメインの実装（表示する画面とpathを定義）
 export const App = () => {
@@ -21,6 +22,8 @@ export const App = () => {
         <Route path="/piano" element={<PianoPage />} />
         {/* ログインページ */}
         <Route path="/login" element={<LoginPage />} />
+        {/* クリエイトページ */}
+        <Route path="/create" element={<CreateAccountPage />} />
       </Routes>
     </Box>
   );
