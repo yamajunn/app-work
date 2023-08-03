@@ -49,9 +49,12 @@ const sx: SxProps<Theme> = {
         backgroundColor: "#FFF",
     },
     ".LoginButton": {
-        color: "#000"
+        color: "#FFF",
+        backgroundColor: "#303030",
     },
     ".CreateButton": {
-        color: "#000"
+        margin: "10px",
+        color: "#FFF",
+        backgroundColor: "#303030",
     },
 };
