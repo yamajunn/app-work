@@ -17,7 +17,7 @@ export const Main = () => {
                 </Button>
                 <Box></Box>
                 <Button className="CreateButton" href="/create">
-                    <Typography variant="h5">Create Account</Typography>
+                    <Typography>Create Account</Typography>
                 </Button>
             </Box>
         </Box>

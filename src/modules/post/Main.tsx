@@ -7,17 +7,15 @@ export const Main = () => {
             <Box className="LoginBox">
                 <Typography className="LoginText" variant="h3">Post</Typography>
                 <Box className="TextBox">
-                    <Typography>タイトル</Typography>
+                    <Typography className="Text-namae">タイトル</Typography>
                     <TextField className="Text" ></TextField>
-                    <Typography>説明</Typography>
+                    <Typography className="Text-namae">説明</Typography>
                     <TextField className="Text-setumei" multiline maxRows={4}></TextField>
+                    <Typography className="Text-namae">ファイル選択</Typography>
+                    <input type="file" accept="json/*" />
                 </Box>
                 <Button className="LoginButton" href="/piano">
-                    <Typography variant="h5">Login</Typography>
-                </Button>
-                <Box></Box>
-                <Button className="CreateButton" href="/create">
-                    <Typography variant="h5">Create Account</Typography>
+                    <Typography variant="h5">Post</Typography>
                 </Button>
             </Box>
         </Box>
@@ -65,4 +63,7 @@ const sx: SxProps<Theme> = {
         color: "#FFF",
         backgroundColor: "#303030",
     },
+    ".Text-namae": {
+        margin: "10px",
+    }
 };

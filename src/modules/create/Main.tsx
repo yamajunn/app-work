@@ -16,7 +16,7 @@ export const Main = () => {
                 </Button>
                 <Box></Box>
                 <Button className="CreateButton" href="/login">
-                    <Typography variant="h5">Login</Typography>
+                    <Typography>Login</Typography>
                 </Button>
             </Box>
         </Box>
