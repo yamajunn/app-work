@@ -1,3 +1,5 @@
+スライド [:Link:](https://docs.google.com/presentation/d/1OeJBq6OdKpItiKlOQkDFjYN-6ayZOaMk3G4oWTE8-gM/edit#slide=id.p)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -44,5 +46,3 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-スライド [:Link:](https://docs.google.com/presentation/d/1OeJBq6OdKpItiKlOQkDFjYN-6ayZOaMk3G4oWTE8-gM/edit#slide=id.p)
