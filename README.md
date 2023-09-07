@@ -45,4 +45,4 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-スライド [スライド](https://docs.google.com/presentation/d/1OeJBq6OdKpItiKlOQkDFjYN-6ayZOaMk3G4oWTE8-gM/edit#slide=id.p)
+スライド [:Link:](https://docs.google.com/presentation/d/1OeJBq6OdKpItiKlOQkDFjYN-6ayZOaMk3G4oWTE8-gM/edit#slide=id.p)
